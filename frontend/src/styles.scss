@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    display: block;
+}
+
+// MIXIN & ROOT
+$firstColor: azure;
+$secondColor: black;
+$thirdColor: darkgreen;
+
+@mixin flex ($flexDirection) {
+    display: flex;
+    flex-direction: $flexDirection;
+}
+
+// UNIVERS
+#univers {
+    height: auto;
+    width: 100%;
+    .navbar {
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            p {
+                font-size: 1.6em;
+                margin-left: 10px;
+                color: $firstColor;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            font-size: 1.4em;
+            background: transparent;
+        }
+        .collapse {
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 60px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                padding: 5px;
+                font-size: 1.4em;
+                margin-top: 6px;
+                margin-right: 15px;
+                color: $firstColor;
+                border: 1px solid $firstColor;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containUnivers {
+        .row {
+            .symbol {
+                margin-right: -12px;
+                .listSymbol {
+                    .img-fluid {
+                        opacity: 0.8;
+                        height: 255px;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 1.0;
+                        }
+                    }
+                }
+            }
+            .univers {
+                .showUnivers {
+                    .detailsSwitch {
+                        .containHeroes {
+                            .infoSwitch {
+                                padding: 15px;
+                                .best {
+                                    text-align: center;
+                                    color: $firstColor;
+                                    font-weight: bold;
+                                }
+                                .row {
+                                    margin: -15px auto;
+                                    text-align: center;
+                                    padding: 20px;
+                                    .comic {
+                                        .img-fluid {
+                                            cursor: pointer;
+                                            padding: 30px;
+                                            height: 620px;
+                                            max-width: 450px;
+                                        }
+                                    }
+                                }
+                                #otherComics {
+                                    padding: 10px;
+                                    display: block;
+                                    margin: 5px auto;
+                                    color: $firstColor;
+                                    border-radius: 20px;
+                                    border: 1px solid $firstColor;
+                                    background-color: $secondColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<section id="univers">
+    <div class="navbar navbar-expand-lg">
+        <div class="navbar-brand">
+            <p>SOUL'S HEROES</p>
+        </div>
+        <button type="button" id="btnBar" data-bs-toggle="modal" data-bs-target="#sideCanvas"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a [routerLink]="'/login'" class="nav-link">UNIVERS</a></li>
+                <li class="nav-item"><a [routerLink]="'/search'" class="nav-link">RECHERCHE</a></li>
+            </ul>
+            <button type="button" id="btnConnect" [routerLink]="'/login'">SE CONNECTER</button>
+        </div>
+    </div>
+
+    <div class="containUnivers">
+        <div class="row">
+            <div class="col-lg-3 symbol">
+                <div class="listSymbol">
+                    <img src="/assets/pict/batmanLogo.jpeg" alt="batman" (click)="showHeroes('batman')" class="img-fluid w-100" />
+                    <img src="/assets/pict/supermanLogo.jpg" alt="superman" (click)="showHeroes('superman')" class="img-fluid w-100" />
+                    <img src="/assets/pict/spidermanLogo.jpeg" alt="spiderman" (click)="showHeroes('spiderman')" class="img-fluid w-100" />
+                </div>
+            </div>
+            <div class="col-lg-9 univers" style="background-color: black;">
+                <div class="showUnivers" [ngSwitch]="univers">
+                    <!-- BATMAN -->
+                    <div class="detailsSwitch" *ngSwitchCase="'batman'">
+                        <div class="containHeroes" *ngFor="let batman of DarkKnigth">
+                            <div class="infoSwitch" [style.background]="'url(' + batman.universWallpaper + ')'" >
+                                <h2 class="best">LES INCONTOURNABLES</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="batman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="batman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="batman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                    </div>
+                                    <button type="button" id="otherComics" [routerLink]="'/batman'">VOIR D'AUTRES COMICS</button>
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- SUPERMAN -->
+                    <div class="detailsSwitch" *ngSwitchCase="'superman'">
+                        <div class="containHeroes" *ngFor="let superman of ManOfSteel">
+                            <div class="infoSwitch" [style.background]="'url(' + superman.universWallpaper + ')'">
+                                <h2 class="best">LES INCONTOURNABLES</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="superman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="superman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="superman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                    </div>
+                                    <button type="button" id="otherComics" [routerLink]="'/superman'">VOIR D'AUTRES COMICS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SPIDERMAN -->
+                    <div class="detailsSwitch" *ngSwitchCase="'spiderman'">
+                        <div class="containHeroes" *ngFor="let spiderman of Spidey">
+                            <div class="infoSwitch" [style.background]="'url(' + spiderman.universWallpaper + ')'">
+                                <h2 class="best">LES INCONTOURNABLES</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="spiderman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="spiderman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                        <div class="col-lg-4 comic">
+                                            <img [src]="spiderman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                        </div>
+                                    </div>
+                                    <button type="button" id="otherComics" [routerLink]="'/spiderman'">VOIR D'AUTRES COMICS</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copy">© SOUL'S HEROES 2023</div>
+        <button type="button" id="btnContact"><i class="fa-solid fa-message"></i></button>
+    </div>
+</section>
