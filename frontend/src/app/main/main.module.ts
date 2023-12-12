@@ -6,11 +6,15 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UniversComponent } from './univers/univers.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SearchComponent } from './search/search.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 const routesPages : Routes = [
   {path: 'univers', component: UniversComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
+  {path: 'heroes', component: HeroesComponent},
+  {path: 'search', component: SearchComponent},
   {path: '', redirectTo: '/univers', pathMatch: 'full'}
 ]
 
@@ -18,7 +22,9 @@ const routesPages : Routes = [
   declarations: [
     LoginComponent,
     SignupComponent,
-    UniversComponent
+    UniversComponent,
+    SearchComponent,
+    HeroesComponent
   ],
   imports: [
     FormsModule,

@@ -3,11 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient) {}
 
   apiUrl = 'http://localhost:3000';
 
@@ -21,8 +20,13 @@ export class AuthService {
     return this._http.post(`${this.apiUrl}/signup`, user);
   }
 
-  // SEARCH 
-  searchComic(title:any): Observable<any> {
+  // SEARCH
+  searchComic(title: any): Observable<any> {
     return this._http.get(`${this.apiUrl}/${title}`);
+  }
+
+  // MESSAGE
+  giveMessage(data: any): Observable<any> {
+    return this._http.post(`${this.apiUrl}`, data);
   }
 }
