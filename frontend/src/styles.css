@@ -7,25 +7,40 @@ body {
   display: block;
 }
 
+@font-face {
+  font-family: heyComic;
+  src: url("/assets/fonts/heyComic.ttf");
+}
+@font-face {
+  font-family: komika;
+  src: url("/assets/fonts/komikaAxis.ttf");
+}
+@font-face {
+  font-family: suplexmentaryComicNC;
+  src: url("/assets/fonts/suplexmentaryComicNC.ttf");
+}
+@font-face {
+  font-family: trailerParkGirl;
+  src: url("/assets/fonts/trailerParkGirl.otf");
+}
 #univers {
   height: auto;
   width: 100%;
 }
 #univers .navbar {
+  height: 120px;
+  padding-bottom: -10px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
 }
-#univers .navbar .navbar-brand .siteLogo {
-  font-size: 1.6em;
-  margin-left: 10px;
-  color: azure;
-}
-#univers .navbar .navbar-brand .siteLogo .hrefSite {
-  color: azure;
-  text-decoration: none;
+#univers .navbar .navbar-brand .img-fluid {
+  height: 100px;
+  cursor: pointer;
+  max-width: 450px;
+  margin-left: 20px;
 }
 #univers .navbar #btnBar {
   display: none;
@@ -34,16 +49,19 @@ body {
   background: transparent;
 }
 #univers .navbar .collapse {
+  margin-top: -10px;
   justify-content: end;
 }
 #univers .navbar .collapse .navbar-nav {
   -moz-column-gap: 60px;
        column-gap: 60px;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 #univers .navbar .collapse .navbar-nav .nav-item .nav-link {
   font-size: 1.6em;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   text-decoration: none;
 }
 #univers .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
@@ -51,11 +69,16 @@ body {
   transform: scale(0.8);
 }
 #univers .navbar .collapse #btnConnect {
-  padding: 5px;
-  font-size: 1.4em;
+  height: 40px;
+  font-size: 1.2em;
   margin-top: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 10px;
   margin-right: 15px;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   border: 1px solid azure;
   background-color: transparent;
 }
@@ -68,7 +91,7 @@ body {
 }
 #univers .containUnivers .row .symbol .listSymbol .img-fluid {
   opacity: 0.8;
-  height: 249px;
+  height: 240px;
   cursor: pointer;
 }
 #univers .containUnivers .row .symbol .listSymbol .img-fluid:hover {
@@ -77,16 +100,18 @@ body {
 #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch {
   padding: 55px;
   width: 100%;
-  height: 747px;
+  height: 719px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .best {
+  letter-spacing: 3px;
   text-align: center;
   color: azure;
   font-weight: bold;
-  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: heyComic;
+  text-shadow: 2px 2px 6px #000000, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }
 #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row {
   margin: -15px auto;
@@ -96,32 +121,39 @@ body {
 #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row .comic .img-fluid {
   cursor: pointer;
   padding: 30px;
-  height: 550px;
+  height: 500px;
   max-width: 450px;
 }
 #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch #otherComics {
   padding: 10px;
   display: block;
+  font-size: 1.1em;
   margin: 5px auto;
   color: azure;
   border-radius: 20px;
+  font-family: suplexmentaryComicNC;
   border: 1px solid azure;
   background-color: black;
 }
+#univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch #otherComics:hover {
+  transform: scale(0.8);
+  background-color: rgb(125, 0, 0);
+}
 #univers .footer {
-  padding: 10px;
+  height: 83px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
 }
 #univers .footer .copy {
-  top: 50%;
+  top: 10%;
   left: 50%;
   margin-top: 30px;
   font-size: 1.6em;
   position: relative;
   color: azure;
+  font-family: komika;
   transform: translate(-50%, -50%);
 }
 #univers .footer #btnContact {
@@ -129,6 +161,7 @@ body {
   opacity: 0.8;
   font-size: 1.4em;
   color: azure;
+  margin-right: 10px;
   background: transparent;
 }
 #univers .footer #btnContact:hover {
@@ -141,20 +174,19 @@ body {
   width: 100%;
 }
 #heroes .navbar {
+  height: 120px;
+  padding-bottom: -10px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
 }
-#heroes .navbar .navbar-brand .siteLogo {
-  font-size: 1.6em;
-  margin-left: 10px;
-  color: azure;
-}
-#heroes .navbar .navbar-brand .siteLogo .hrefSite {
-  color: azure;
-  text-decoration: none;
+#heroes .navbar .navbar-brand .img-fluid {
+  height: 100px;
+  cursor: pointer;
+  max-width: 450px;
+  margin-left: 20px;
 }
 #heroes .navbar #btnBar {
   display: none;
@@ -163,16 +195,19 @@ body {
   background: transparent;
 }
 #heroes .navbar .collapse {
+  margin-top: -10px;
   justify-content: end;
 }
 #heroes .navbar .collapse .navbar-nav {
   -moz-column-gap: 60px;
        column-gap: 60px;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 #heroes .navbar .collapse .navbar-nav .nav-item .nav-link {
   font-size: 1.6em;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   text-decoration: none;
 }
 #heroes .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
@@ -180,17 +215,33 @@ body {
   transform: scale(0.8);
 }
 #heroes .navbar .collapse #btnConnect {
-  padding: 5px;
-  font-size: 1.4em;
+  height: 40px;
+  font-size: 1.2em;
   margin-top: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 10px;
   margin-right: 15px;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   border: 1px solid azure;
   background-color: transparent;
 }
 #heroes .navbar .collapse #btnConnect:hover {
   color: black;
   background-color: azure;
+}
+#heroes .containHeroes {
+  height: 76vh;
+}
+#heroes .containHeroes .row {
+  text-align: center;
+}
+#heroes .containHeroes .row .col-lg-4 .img-fluid {
+  margin: 20px;
+  height: 250px;
+  max-width: 450px;
 }
 #heroes .footer {
   padding: 10px;
@@ -202,10 +253,11 @@ body {
 #heroes .footer .copy {
   top: 50%;
   left: 50%;
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 1.6em;
   position: relative;
   color: azure;
+  font-family: komika;
   transform: translate(-50%, -50%);
 }
 #heroes .footer #btnContact {
@@ -225,20 +277,19 @@ body {
   width: 100%;
 }
 #search .navbar {
+  height: 120px;
+  padding-bottom: -10px;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
 }
-#search .navbar .navbar-brand .siteLogo {
-  font-size: 1.6em;
-  margin-left: 10px;
-  color: azure;
-}
-#search .navbar .navbar-brand .siteLogo .hrefSite {
-  color: azure;
-  text-decoration: none;
+#search .navbar .navbar-brand .img-fluid {
+  height: 100px;
+  cursor: pointer;
+  max-width: 450px;
+  margin-left: 20px;
 }
 #search .navbar #btnBar {
   display: none;
@@ -247,16 +298,19 @@ body {
   background: transparent;
 }
 #search .navbar .collapse {
+  margin-top: -10px;
   justify-content: end;
 }
 #search .navbar .collapse .navbar-nav {
   -moz-column-gap: 60px;
        column-gap: 60px;
-  margin-right: 60px;
+  margin-right: 50px;
 }
 #search .navbar .collapse .navbar-nav .nav-item .nav-link {
   font-size: 1.6em;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   text-decoration: none;
 }
 #search .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
@@ -264,11 +318,16 @@ body {
   transform: scale(0.8);
 }
 #search .navbar .collapse #btnConnect {
-  padding: 5px;
-  font-size: 1.4em;
+  height: 40px;
+  font-size: 1.2em;
   margin-top: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 10px;
   margin-right: 15px;
   color: azure;
+  letter-spacing: 2px;
+  font-family: komika;
   border: 1px solid azure;
   background-color: transparent;
 }
@@ -277,7 +336,7 @@ body {
   background-color: azure;
 }
 #search .containSearch .showSearch {
-  height: 83vh;
+  height: 76vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -300,7 +359,7 @@ body {
   background: transparent;
 }
 #search .footer {
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -313,6 +372,7 @@ body {
   font-size: 1.6em;
   position: relative;
   color: azure;
+  font-family: komika;
   transform: translate(-50%, -50%);
 }
 #search .footer #btnContact {
@@ -357,20 +417,30 @@ body {
   font-size: 2.2em;
   color: azure;
   text-align: center;
+  letter-spacing: 2px;
   margin-bottom: -10px;
-  text-shadow: 0px 0px 0px black;
+  margin-left: 20px;
+  font-family: komika;
+  text-shadow: 0px 1px 5px black;
+}
+#login .containLogIn form input {
+  width: 60%;
+  margin: auto;
+  display: block;
 }
 #login .containLogIn form .already {
   font-size: 1.6em;
   margin-top: 9px;
   color: azure;
   text-align: center;
+  font-family: suplexmentaryComicNC;
   text-shadow: 0px 0px 4px black;
 }
 #login .containLogIn form .already .hrefSignUp {
   cursor: pointer;
   color: azure;
   text-decoration: none;
+  font-family: suplexmentaryComicNC;
 }
 #login .containLogIn form .already .hrefSignUp:hover {
   opacity: 0.8;
@@ -378,11 +448,17 @@ body {
 #login .containLogIn form #btnIdentify {
   padding: 7px;
   display: block;
+  font-size: 1.2em;
   margin: 8px auto;
   color: azure;
   border-radius: 20px;
+  font-family: heyComic;
   border: 1px solid azure;
   background-color: darkgreen;
+}
+#login .containLogIn form #btnIdentify:hover {
+  transform: scale(0.9);
+  background-color: rgb(125, 0, 0);
 }
 
 #signup {
@@ -415,9 +491,11 @@ body {
 }
 #signup .containSignUp form .register {
   font-size: 2.2em;
+  letter-spacing: 2px;
   text-align: center;
   color: azure;
   margin-bottom: -10px;
+  font-family: komika;
   text-shadow: 0px 0px 4px black;
 }
 #signup .containSignUp form .nomember {
@@ -425,12 +503,14 @@ body {
   font-size: 1.6em;
   color: azure;
   text-align: center;
+  font-family: suplexmentaryComicNC;
   text-shadow: 0px 0px 4px black;
 }
 #signup .containSignUp form .nomember .hrefLogIn {
   cursor: pointer;
   color: azure;
   text-decoration: none;
+  font-family: suplexmentaryComicNC;
 }
 #signup .containSignUp form .nomember .hrefLogIn:hover {
   opacity: 0.8;
@@ -442,35 +522,50 @@ body {
   margin: 8px auto;
   color: azure;
   border-radius: 20px;
+  font-family: heyComic;
   border: 1px solid azure;
   background-color: darkgreen;
 }
+#signup .containSignUp form #btnRegister:hover {
+  transform: scale(0.9);
+  background-color: rgb(125, 0, 0);
+}
 
+#contact #btnCloseModal {
+  top: 1%;
+  left: 97%;
+  cursor: pointer;
+  font-size: 1.4em;
+  position: absolute;
+  color: black;
+  background: azure;
+}
+#contact #btnCloseModal:hover {
+  opacity: 0.8;
+  transform: scale(0.8);
+}
 #contact .modal-dialog .modal-content {
   background-color: rgb(136, 131, 131);
 }
-#contact .modal-dialog .modal-content #btnCloseModal {
-  top: 0%;
-  left: 94%;
-  font-size: 1.4em;
-  border: none;
-  position: absolute;
-  font-weight: bold;
-  color: black;
-  background: transparent;
-}
 #contact .modal-dialog .modal-content .modal-body h2 {
   text-align: center;
+  font-family: heyComic;
 }
 #contact .modal-dialog .modal-content .modal-body form {
   margin: -5px auto;
 }
 #contact .modal-dialog .modal-content .modal-body form #btnSend {
-  font-size: 1.2em;
+  padding: 10px;
   display: block;
-  margin: 10px auto;
+  font-size: 1.1em;
+  margin: 15px auto;
   color: azure;
   border-radius: 20px;
-  background: darkgreen;
-  border: 1px solid black;
+  font-family: suplexmentaryComicNC;
+  border: 1px solid azure;
+  background-color: darkgreen;
+}
+#contact .modal-dialog .modal-content .modal-body form #btnSend:hover {
+  transform: scale(1.1);
+  background-color: rgb(125, 0, 0);
 }/*# sourceMappingURL=styles.css.map */

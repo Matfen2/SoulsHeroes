@@ -1,7 +1,7 @@
 <section id="univers">
     <div class="navbar navbar-expand-lg">
         <div class="navbar-brand">
-            <p class="siteLogo"><a [routerLink]="'/univers'" class="hrefSite">SOUL'S HEROES</a></p>
+            <img src="/assets/pict/soulsHeroesLogo.png" [routerLink]="'/univers'" class="img-fluid w-100" alt="siteLogo" />
         </div>
         <button type="button" id="btnBar" data-bs-toggle="modal" data-bs-target="#sideCanvas"><i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse">
@@ -22,7 +22,7 @@
                     <img src="/assets/pict/spidermanLogo.jpeg" alt="spiderman" (click)="showHeroes('spiderman')" class="img-fluid w-100" />
                 </div>
             </div>
-            <div class="col-lg-9 univers" style="background-color: black;">
+            <div class="col-lg-9 univers" style="background-color: rgb(0, 0, 0);">
                 <div class="showUnivers" [ngSwitch]="univers">
                     <!-- BATMAN -->
                     <div class="detailsSwitch" *ngSwitchCase="'batman'">
@@ -31,13 +31,13 @@
                                 <h2 class="best">LES INCONTOURNABLES</h2>
                                     <div class="row">
                                         <div class="col-lg-4 comic">
-                                            <img [src]="batman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="batman.firstComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="batman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="batman.secondComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="batman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="batman.thirdComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                     </div>
                                     <button type="button" id="otherComics" [routerLink]="'/batman'">VOIR D'AUTRES COMICS</button>
@@ -52,13 +52,13 @@
                                 <h2 class="best">LES INCONTOURNABLES</h2>
                                     <div class="row">
                                         <div class="col-lg-4 comic">
-                                            <img [src]="superman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="superman.firstComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="superman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="superman.secondComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="superman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="superman.thirdComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                     </div>
                                     <button type="button" id="otherComics" [routerLink]="'/superman'">VOIR D'AUTRES COMICS</button>
@@ -72,13 +72,13 @@
                                 <h2 class="best">LES INCONTOURNABLES</h2>
                                     <div class="row">
                                         <div class="col-lg-4 comic">
-                                            <img [src]="spiderman.firstComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="spiderman.firstComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="spiderman.secondComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="spiderman.secondComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                         <div class="col-lg-4 comic">
-                                            <img [src]="spiderman.thirdComic" alt="comicFirst" class="img-fluid w-100" />
+                                            <img [src]="spiderman.thirdComic" alt="comicFirst" class="img-fluid w-100" appComicsShow/>
                                         </div>
                                     </div>
                                     <button type="button" id="otherComics" [routerLink]="'/spiderman'">VOIR D'AUTRES COMICS</button>
@@ -97,9 +97,9 @@
 </section>
 
 <div class="modal fade" id="contact" aria-hidden="true" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <button type="button" id="btnCloseModal" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+    <button type="button" id="btnCloseModal" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">        
         <div class="modal-body">
             <h2>CONTACTEZ-NOUS :</h2>
             <div class="form-area">

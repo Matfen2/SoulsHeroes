@@ -1,3 +1,4 @@
+// main.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,15 +9,16 @@ import { UniversComponent } from './univers/univers.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { ComicsShowDirective } from '../comics-show.directive';
 
-const routesPages : Routes = [
-  {path: 'univers', component: UniversComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
-  {path: 'heroes', component: HeroesComponent},
-  {path: 'search', component: SearchComponent},
-  {path: '', redirectTo: '/univers', pathMatch: 'full'}
-]
+const routesPages: Routes = [
+  { path: 'univers', component: UniversComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'heroes', component: HeroesComponent },
+  { path: 'search', component: SearchComponent },
+  { path: '', redirectTo: '/univers', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ const routesPages : Routes = [
     SignupComponent,
     UniversComponent,
     SearchComponent,
-    HeroesComponent
+    HeroesComponent,
+    ComicsShowDirective,
   ],
   imports: [
     FormsModule,
@@ -32,6 +35,6 @@ const routesPages : Routes = [
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forChild(routesPages),
-  ]
+  ],
 })
-export class MainModule { }
+export class MainModule {}

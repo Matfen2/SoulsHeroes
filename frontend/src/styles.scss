@@ -11,10 +11,37 @@ body {
 $firstColor: azure;
 $secondColor: black;
 $thirdColor: darkgreen;
+$fourColor: rgb(125, 0, 0);
+
+$firstFont: heyComic;
+$secondFont: komika;
+$thirdFont: suplexmentaryComicNC;
+$fourFont: trailerParkGirl;
 
 @mixin flex ($flexDirection) {
     display: flex;
     flex-direction: $flexDirection;
+}
+
+// FONTS 
+@font-face {
+    font-family: $firstFont;
+    src: url('/assets/fonts/heyComic.ttf');
+}
+
+@font-face {
+    font-family: $secondFont;
+    src: url('/assets/fonts/komikaAxis.ttf');
+}
+
+@font-face {
+    font-family: $thirdFont;
+    src: url('/assets/fonts/suplexmentaryComicNC.ttf');
+}
+
+@font-face {
+    font-family: $fourFont;
+    src: url('/assets/fonts/trailerParkGirl.otf');
 }
 
 // UNIVERS
@@ -22,19 +49,18 @@ $thirdColor: darkgreen;
     height: auto;
     width: 100%;
     .navbar {
+        height: 120px;
+        padding-bottom: -10px;
         align-items: center;
         @include flex (row);
         justify-content: space-between;
         background-color: $secondColor;
         .navbar-brand {
-            .siteLogo {
-                font-size: 1.6em;
-                margin-left: 10px;
-                color: $firstColor;
-                .hrefSite {
-                    color: $firstColor;
-                    text-decoration: none;
-                }
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
             }
         }
         #btnBar {
@@ -44,14 +70,17 @@ $thirdColor: darkgreen;
             background: transparent;
         }
         .collapse {
+            margin-top: -10px;
             justify-content: end;
             .navbar-nav {
                 column-gap: 60px;
-                margin-right: 60px;
+                margin-right: 50px;
                 .nav-item {
                     .nav-link {
                         font-size: 1.6em;
                         color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
                         text-decoration: none;
                         &:hover {
                             opacity: 0.8;
@@ -61,11 +90,16 @@ $thirdColor: darkgreen;
                 }
             }
             #btnConnect {
-                padding: 5px;
-                font-size: 1.4em;
+                height: 40px;
+                font-size: 1.2em;
                 margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
                 margin-right: 15px;
                 color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
                 border: 1px solid $firstColor;
                 background-color: transparent;
                 &:hover {
@@ -82,7 +116,7 @@ $thirdColor: darkgreen;
                 .listSymbol {
                     .img-fluid {
                         opacity: 0.8;
-                        height: 249px;
+                        height: 240px;
                         cursor: pointer;
                         &:hover {
                             opacity: 1.0;
@@ -97,15 +131,17 @@ $thirdColor: darkgreen;
                             .infoSwitch {
                                 padding: 55px;
                                 width: 100%;
-                                height: 747px;
+                                height: 719px;
                                 background-size: cover;
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 .best {
+                                    letter-spacing: 3px;
                                     text-align: center;
                                     color: $firstColor;
                                     font-weight: bold;
-                                    text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(0,0,0,0.15);
+                                    font-family: $firstFont;
+                                    text-shadow: 2px 2px 6px #000000, 5px 4px 0px rgba(0,0,0,0.15);
                                 }
                                 .row {
                                     margin: -15px auto;
@@ -115,7 +151,7 @@ $thirdColor: darkgreen;
                                         .img-fluid {
                                             cursor: pointer;
                                             padding: 30px;
-                                            height: 550px;
+                                            height: 500px;
                                             max-width: 450px;
                                         }
                                     }
@@ -123,15 +159,129 @@ $thirdColor: darkgreen;
                                 #otherComics {
                                     padding: 10px;
                                     display: block;
+                                    font-size: 1.1em;
                                     margin: 5px auto;
                                     color: $firstColor;
                                     border-radius: 20px;
+                                    font-family: $thirdFont;
                                     border: 1px solid $firstColor;
                                     background-color: $secondColor;
+                                    &:hover {
+                                        transform: scale(0.8);
+                                        background-color: $fourColor;
+                                    }
                                 }
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// HEROES
+#heroes {
+    height: auto;
+    width: 100%;
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            font-size: 1.4em;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containHeroes {
+        height: 76vh;
+        .row {
+            text-align: center;
+            .col-lg-4 {
+                .img-fluid {
+                    margin: 20px;
+                    height: 250px;
+                    max-width: 450px;
                 }
             }
         }
@@ -148,92 +298,7 @@ $thirdColor: darkgreen;
             font-size: 1.6em;
             position: relative;
             color: $firstColor;
-            transform: translate(-50%, -50%);
-        }
-        #btnContact {
-            border: none;
-            opacity: 0.8;
-            font-size: 1.4em;
-            color: $firstColor;
-            background: transparent;
-            &:hover {
-                opacity: 1.0;
-                transform: scale(1.2);
-            }
-        }
-    }
-}
-
-// HEROES
-#heroes {
-    height: auto;
-    width: 100%;
-    .navbar {
-        align-items: center;
-        @include flex (row);
-        justify-content: space-between;
-        background-color: $secondColor;
-        .navbar-brand {
-            .siteLogo {
-                font-size: 1.6em;
-                margin-left: 10px;
-                color: $firstColor;
-                .hrefSite {
-                    color: $firstColor;
-                    text-decoration: none;
-                }
-            }
-        }
-        #btnBar {
-            display: none;
-            border: none;
-            font-size: 1.4em;
-            background: transparent;
-        }
-        .collapse {
-            justify-content: end;
-            .navbar-nav {
-                column-gap: 60px;
-                margin-right: 60px;
-                .nav-item {
-                    .nav-link {
-                        font-size: 1.6em;
-                        color: $firstColor;
-                        text-decoration: none;
-                        &:hover {
-                            opacity: 0.8;
-                            transform: scale(0.8);
-                        }
-                    }
-                }
-            }
-            #btnConnect {
-                padding: 5px;
-                font-size: 1.4em;
-                margin-top: 6px;
-                margin-right: 15px;
-                color: $firstColor;
-                border: 1px solid $firstColor;
-                background-color: transparent;
-                &:hover {
-                    color: $secondColor;
-                    background-color: $firstColor;
-                }
-            }
-        }
-    }
-    .footer {
-        padding: 10px;
-        @include flex (row);
-        justify-content: space-between;
-        background-color: $secondColor;
-        .copy {
-            top: 50%;
-            left: 50%;
-            margin-top: 10px;
-            font-size: 1.6em;
-            position: relative;
-            color: $firstColor;
+            font-family: $secondFont;
             transform: translate(-50%, -50%);
         }
         #btnContact {
@@ -255,19 +320,18 @@ $thirdColor: darkgreen;
     height: auto;
     width: 100%;
     .navbar {
+        height: 120px;
+        padding-bottom: -10px;
         align-items: center;
         @include flex (row);
         justify-content: space-between;
         background-color: $secondColor;
         .navbar-brand {
-            .siteLogo {
-                font-size: 1.6em;
-                margin-left: 10px;
-                color: $firstColor;
-                .hrefSite {
-                    color: $firstColor;
-                    text-decoration: none;
-                }
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
             }
         }
         #btnBar {
@@ -277,14 +341,17 @@ $thirdColor: darkgreen;
             background: transparent;
         }
         .collapse {
+            margin-top: -10px;
             justify-content: end;
             .navbar-nav {
                 column-gap: 60px;
-                margin-right: 60px;
+                margin-right: 50px;
                 .nav-item {
                     .nav-link {
                         font-size: 1.6em;
                         color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
                         text-decoration: none;
                         &:hover {
                             opacity: 0.8;
@@ -294,11 +361,16 @@ $thirdColor: darkgreen;
                 }
             }
             #btnConnect {
-                padding: 5px;
-                font-size: 1.4em;
+                height: 40px;
+                font-size: 1.2em;
                 margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
                 margin-right: 15px;
                 color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
                 border: 1px solid $firstColor;
                 background-color: transparent;
                 &:hover {
@@ -310,7 +382,7 @@ $thirdColor: darkgreen;
     }
     .containSearch {
         .showSearch {
-            height: 83vh;
+            height: 76vh;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -333,7 +405,7 @@ $thirdColor: darkgreen;
         }
     }
     .footer {
-        padding: 5px;
+        padding: 10px;
         @include flex (row);
         justify-content: space-between;
         background-color: $secondColor;
@@ -344,6 +416,7 @@ $thirdColor: darkgreen;
             font-size: 1.6em;
             position: relative;
             color: $firstColor;
+            font-family: $secondFont;
             transform: translate(-50%, -50%);
         }
         #btnContact {
@@ -390,19 +463,29 @@ $thirdColor: darkgreen;
             font-size: 2.2em;
             color: $firstColor;
             text-align: center;
+            letter-spacing: 2px;
             margin-bottom: -10px;
-            text-shadow: 0px 0px 0px $secondColor;
+            margin-left: 20px;
+            font-family: $secondFont;
+            text-shadow: 0px 1px 5px $secondColor;
+           }
+           input {
+            width: 60%;
+            margin: auto;
+            display: block;
            }
            .already {
                 font-size: 1.6em;
                 margin-top: 9px;
                 color: $firstColor;
                 text-align: center;
+                font-family: $thirdFont;
                 text-shadow: 0px 0px 4px $secondColor;
                 .hrefSignUp {
                     cursor: pointer;
                     color: $firstColor;
                     text-decoration: none;
+                    font-family: $thirdFont;
                     &:hover {
                         opacity: 0.8;
                     }
@@ -411,11 +494,17 @@ $thirdColor: darkgreen;
             #btnIdentify {
                 padding: 7px;
                 display: block;
+                font-size: 1.2em;
                 margin: 8px auto;
                 color: $firstColor;
                 border-radius: 20px;
+                font-family: $firstFont;
                 border: 1px solid $firstColor;
                 background-color: $thirdColor;
+                &:hover {
+                    transform: scale(0.9);
+                    background-color: $fourColor;
+                }
             }
         }
     }
@@ -451,9 +540,11 @@ $thirdColor: darkgreen;
         form {
             .register {
                 font-size: 2.2em;
+                letter-spacing: 2px;
                 text-align: center;
                 color: $firstColor;
                 margin-bottom: -10px;
+                font-family: $secondFont;
                 text-shadow: 0px 0px 4px $secondColor;
             }
             .nomember {
@@ -461,11 +552,13 @@ $thirdColor: darkgreen;
                 font-size: 1.6em;
                 color: $firstColor;
                 text-align: center;
+                font-family: $thirdFont;
                 text-shadow: 0px 0px 4px $secondColor;
                 .hrefLogIn {
                     cursor: pointer;
                     color: $firstColor;
                     text-decoration: none;
+                    font-family: $thirdFont;
                     &:hover {
                         opacity: 0.8;
                     }
@@ -478,8 +571,13 @@ $thirdColor: darkgreen;
                 margin: 8px auto;
                 color: $firstColor;
                 border-radius: 20px;
+                font-family: $firstFont;
                 border: 1px solid $firstColor;
                 background-color: $thirdColor;
+                &:hover {
+                    transform: scale(0.9);
+                    background-color: $fourColor;
+                }
             }
         }
     }
@@ -487,36 +585,51 @@ $thirdColor: darkgreen;
 
 // CONTACT
 #contact {
+    #btnCloseModal {
+        top: 1%;
+        left: 97%;
+        cursor: pointer;
+        font-size: 1.4em;
+        position: absolute;
+        color: $secondColor;
+        background: $firstColor;
+        &:hover {
+            opacity: 0.8;
+            transform: scale(0.8);
+        }
+    }
     .modal-dialog {
         .modal-content {
             background-color: rgb(136, 131, 131);
-            #btnCloseModal {
-                top: 0%;
-                left: 94%;
-                font-size: 1.4em;
-                border: none;
-                position: absolute;
-                font-weight: bold;
-                color: $secondColor;
-                background: transparent;
-            }
             .modal-body {
                 h2 {
                     text-align: center;
+                    font-family: $firstFont;
                 }
                 form {
                     margin: -5px auto;
                     #btnSend {
-                        font-size: 1.2em;
+                        padding: 10px;
                         display: block;
-                        margin: 10px auto;
+                        font-size: 1.1em;
+                        margin: 15px auto;
                         color: $firstColor;
                         border-radius: 20px;
-                        background: $thirdColor;
-                        border: 1px solid $secondColor;
+                        font-family: $thirdFont;
+                        border: 1px solid $firstColor;
+                        background-color: $thirdColor;
+                        &:hover {
+                            transform: scale(1.1);
+                            background-color: $fourColor;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+// MEDIA QUERY
+@media screen and (max-width: 1440px) {
+    
 }
