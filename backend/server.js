@@ -91,12 +91,18 @@ app.get("/comics/:title", (req, res) => {
       res.status(500).send({ message: "Internal server error" });
     }
     if (result.length > 0) {
-        res.status(200).send({ message: "Accès au données de ce comic", data: result });
+      res.send({
+        message: "get titles success",
+        data: result,
+      });
     } else {
-      res.status(400).send({ message: "Echec de l'accès au données de ce comic" });
+      res.send({
+        message: "get titles error",
+      });
     }
   });
 });
+
 
 // MESSAGE
 app.post("/message", (req, res) => {

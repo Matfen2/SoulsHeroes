@@ -402,6 +402,22 @@ $fourFont: trailerParkGirl;
                     background: transparent;
                 }
             }
+            .results {
+                text-align: center;
+                .searchResult {
+                    font-family: $secondFont;
+                    margin-top: 20px;
+                    color: $firstColor;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .resultsSearch {
+                    font-size: 1.6em;
+                    font-family: $firstFont;
+                    text-align: center;
+                    color: $firstColor;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+            }
         }
     }
     .footer {

@@ -15,7 +15,7 @@
 
     <div class="containSearch">
         <div class="showSearch">
-            <form [formGroup]="searchComicsList" (submit)="searchedComics()">
+            <form [formGroup]="searchComicsList" (submit)="searchComics()">
                 <label></label>
                 <input type="text" name="title" id="title" placeholder="Entrer un titre" formControlName="title" class="form-control" required>
             
@@ -23,13 +23,17 @@
             </form>
 
             <div class="results" *ngIf="searchedTitle">
-                <h3>Résultats de recherche pour : {{ searchedTitle }}</h3>
+                <h3 class="searchResult">Résultats de recherche pour : {{ searchedTitle }}</h3>
             </div>
 
             <div class="results" *ngIf="results && !loading">
-                <div class="resultsSearch" *ngFor="let result of results">
-                    <img [src]="result.pict" class="img-fluid w-100" />
-                    <p>{{result.title}}</p>
+                <div class="resultsSearch">
+                    <div class="row">
+                        <div class="col-lg-4" *ngFor="let result of results">
+                            <img [src]="result.book" class="img-fluid w-100" />
+                            <p>{{result.title}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

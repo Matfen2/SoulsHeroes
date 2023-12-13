@@ -19,10 +19,12 @@ export class SearchComponent implements OnInit {
     title: new FormControl('', Validators.required),
   });
 
-  searchedComics() {
+  searchComics() {
     if (this.searchComicsList.valid) {
       this.loading = true;
+
       const title = this.searchComicsList.value.title;
+
       this.authService.searchComic(title).subscribe(
         (res) => {
           this.results = res.data;
@@ -32,9 +34,9 @@ export class SearchComponent implements OnInit {
         },
         (error) => {
           console.error(error);
-          this.loading = false;
           this.errorMessage =
-            "Une erreur s'est produite lors de la recherche du comic";
+            "Une erreur s'est produite lors de la recherche du jeu.";
+          this.loading = false;
         }
       );
     }
@@ -69,5 +71,7 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

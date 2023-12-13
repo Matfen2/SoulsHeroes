@@ -22,7 +22,7 @@ export class AuthService {
 
   // SEARCH
   searchComic(title: any): Observable<any> {
-    return this._http.get(`${this.apiUrl}/${title}`);
+    return this._http.get(`${this.apiUrl}/comics/${title}`);
   }
 
   // MESSAGE

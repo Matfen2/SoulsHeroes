@@ -358,6 +358,22 @@ body {
   border: none;
   background: transparent;
 }
+#search .containSearch .showSearch .results {
+  text-align: center;
+}
+#search .containSearch .showSearch .results .searchResult {
+  font-family: komika;
+  margin-top: 20px;
+  color: azure;
+  text-shadow: 0px 1px 5px black;
+}
+#search .containSearch .showSearch .results .resultsSearch {
+  font-size: 1.6em;
+  font-family: heyComic;
+  text-align: center;
+  color: azure;
+  text-shadow: 0px 1px 5px black;
+}
 #search .footer {
   padding: 10px;
   display: flex;
