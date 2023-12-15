@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/auth.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
-  selector: 'app-univers',
-  templateUrl: './univers.component.html',
-  styleUrls: ['./univers.component.css'],
+  selector: 'app-batman-univers',
+  templateUrl: './batman-univers.component.html',
+  styleUrls: ['./batman-univers.component.css'],
 })
-export class UniversComponent implements OnInit {
-  univers: string = '';
+export class BatmanUniversComponent implements OnInit {
+  constructor(
+    private authService: AuthService,
+  ) {}
 
-  DarkKnigth = [
+  batmanComics = [
     {
       id: 1,
       book: '/assets/pict/batmanComicsOne.jpg',
@@ -23,55 +26,39 @@ export class UniversComponent implements OnInit {
       id: 3,
       book: '/assets/pict/batmanComicsThree.jpg',
     },
-  ];
-
-  ManOfSteel = [
     {
-      id: 1,
-      book: '/assets/pict/supermanTome1.jpg',
+      id: 4,
+      book: '/assets/pict/batmanArmèreVictoire.jpg',
     },
     {
-      id: 2,
-      book: '/assets/pict/supermanTome2.jpg',
+      id: 5,
+      book: '/assets/pict/batmanDesOmbresDansLaNuit.jpg',
     },
     {
-      id: 3,
-      book: '/assets/pict/supermanTome3.jpg',
-    },
-  ];
-
-  Spidey = [
-    {
-      id: 1,
-      book: '/assets/pict/spidermanTome1.jpg',
+      id: 6,
+      book: '/assets/pict/batman&RobinTome1.jpg',
     },
     {
-      id: 2,
-      book: '/assets/pict/spidermanTome2.jpg',
+      id: 7,
+      book: '/assets/pict/batman&RobinTome2.jpg',
     },
     {
-      id: 3,
-      book: '/assets/pict/spidermanTome3.jpg',
+      id: 8,
+      book: '/assets/pict/batman&RobinTome3.jpg',
     },
   ];
-
-  showHeroes(comic: string) {
-    this.univers = comic;
-  }
 
   member = {
     pseudo: '',
-    subject: '',
+    sujbect: '',
     message: '',
   };
 
   answer = new FormGroup({
     pseudo: new FormControl('', Validators.required),
-    subject: new FormControl('', Validators.required), // Match the name here
+    studio: new FormControl('', Validators.required),
     date: new FormControl('', Validators.required),
   });
-
-  constructor(private authService: AuthService) {}
 
   sendMessage() {
     if (this.answer.valid) {
@@ -90,5 +77,7 @@ export class UniversComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

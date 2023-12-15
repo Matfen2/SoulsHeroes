@@ -1,4 +1,4 @@
-<section id="search">
+<section id="spidermanComics">
     <div class="navbar navbar-expand-lg">
         <div class="navbar-brand">
             <img src="/assets/pict/soulsHeroesLogo.png" [routerLink]="'/univers'" class="img-fluid w-100" alt="siteLogo" />
@@ -13,41 +13,18 @@
         </div>
     </div>
 
-    <div class="containSearch">
-        <div class="showSearch">
-            <form [formGroup]="searchComicsList" (submit)="searchComics()">
-                <label></label>
-                <input type="text" name="title" id="title" placeholder="Entrer un titre" formControlName="title" class="form-control" required>
-            
-                <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
-            </form>
-
-            <div class="results" *ngIf="searchedTitle">
-                <h3 class="searchResult">Résultats de recherche pour : {{ searchedTitle }}</h3>
+    <div class="containSpiderManComics" *ngIf="spidermanDetails">
+        <div class="row">
+            <div class="col-lg-5 book">
+                <img [src]="spidermanDetails.pict" class="img-fluid w-100" />
             </div>
-
-            <div class="results" *ngIf="results && !loading">
-                <div class="resultsSearch">
-                    <div class="row">
-                        <div class="col-lg-4" *ngFor="let result of results">
-                            <img [src]="sanitize(result.book)" style="height: 400px; max-width: 300px;" class="img-fluid w-100" />
-                            <p>{{result.title}}</p>
-                             <button type="button" id="btnBuy" [routerLink]="result.buy">ACHETER</button>
-                        </div>
-                    </div>
+            <div class="col-lg-7 describe">
+                <h2 class="title">{{spidermanDetails.title}}</h2>
+                <p class="creator">{{spidermanDetails.creator}}</p>
+                <p class="story">{{spidermanDetails.synopsis}}</p>
+                <div class="listBuy">
+                    <p class="price">Prix : {{spidermanDetails.price}}<button type="button" id="btnBuy"><a [href]="spidermanDetails.hrefBuy"><i class="fa-solid fa-cart-shopping"></i></a></button></p>
                 </div>
-            </div>
-
-            <div class="noFound" *ngIf="results.length === 0">
-                <p>Aucun résultat trouvé</p>
-            </div>
-
-            <div class="load" *ngIf="loading">
-                <p>Chargemant en cours...</p>
-            </div>
-
-            <div class="errorMessage" *ngIf="errorMessage">
-                <p>{{ errorMessage }}</p>
             </div>
         </div>
     </div>

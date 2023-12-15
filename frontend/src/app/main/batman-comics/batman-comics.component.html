@@ -1,0 +1,37 @@
+<section id="batmanComics">
+    <div class="navbar navbar-expand-lg">
+        <div class="navbar-brand">
+            <img src="/assets/pict/soulsHeroesLogo.png" [routerLink]="'/univers'" class="img-fluid w-100" alt="siteLogo" />
+        </div>
+        <button type="button" id="btnBar" data-bs-toggle="modal" data-bs-target="#sideCanvas"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a [routerLink]="'/heroes'" class="nav-link">HEROS</a></li>
+                <li class="nav-item"><a [routerLink]="'/search'" class="nav-link">RECHERCHE</a></li>
+            </ul>
+            <button type="button" id="btnConnect" [routerLink]="'/login'">SE CONNECTER</button>
+        </div>
+    </div>
+
+    <div class="containBatmanComics" *ngIf="batmanDetails">
+        <div class="row">
+            <div class="col-lg-5 book">
+                <img [src]="batmanDetails.pict" class="img-fluid w-100" />
+            </div>
+            <div class="col-lg-7 describe">
+                <h2 class="title">{{batmanDetails.title}}</h2>
+                <p class="creator">{{batmanDetails.creator}}</p>
+                <p class="story">{{batmanDetails.synopsis}}</p>
+                <div class="listBuy">
+                    <p class="price">Prix : {{batmanDetails.price}}<button type="button" id="btnBuy"><a [href]="batmanDetails.hrefBuy"><i class="fa-solid fa-cart-shopping"></i></a></button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copy">© SOUL'S HEROES 2023</div>
+        <button type="button" id="btnContact" data-bs-toggle="modal" data-bs-target="#contact"><i class="fa-solid fa-message"></i></button>
+    </div>
+</section>
+

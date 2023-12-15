@@ -1,4 +1,4 @@
-<section id="search">
+<section id="spidermanUnivers">
     <div class="navbar navbar-expand-lg">
         <div class="navbar-brand">
             <img src="/assets/pict/soulsHeroesLogo.png" [routerLink]="'/univers'" class="img-fluid w-100" alt="siteLogo" />
@@ -13,41 +13,11 @@
         </div>
     </div>
 
-    <div class="containSearch">
-        <div class="showSearch">
-            <form [formGroup]="searchComicsList" (submit)="searchComics()">
-                <label></label>
-                <input type="text" name="title" id="title" placeholder="Entrer un titre" formControlName="title" class="form-control" required>
-            
-                <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
-            </form>
-
-            <div class="results" *ngIf="searchedTitle">
-                <h3 class="searchResult">Résultats de recherche pour : {{ searchedTitle }}</h3>
-            </div>
-
-            <div class="results" *ngIf="results && !loading">
-                <div class="resultsSearch">
-                    <div class="row">
-                        <div class="col-lg-4" *ngFor="let result of results">
-                            <img [src]="sanitize(result.book)" style="height: 400px; max-width: 300px;" class="img-fluid w-100" />
-                            <p>{{result.title}}</p>
-                             <button type="button" id="btnBuy" [routerLink]="result.buy">ACHETER</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="noFound" *ngIf="results.length === 0">
-                <p>Aucun résultat trouvé</p>
-            </div>
-
-            <div class="load" *ngIf="loading">
-                <p>Chargemant en cours...</p>
-            </div>
-
-            <div class="errorMessage" *ngIf="errorMessage">
-                <p>{{ errorMessage }}</p>
+    <div class="containSpiderManUnivers">
+        <h2 class="citation">"DE GRANDS POUVOIRS IMPLIQUENT DE GRANDES RESPONSABILITES"</h2>
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let spiderman of spiderManComics">
+                <img [src]="spiderman.book" [routerLink]="['/spiderman-comics', spiderman.id]" class="img-fluid w-100" appComicsShow />
             </div>
         </div>
     </div>
@@ -77,3 +47,4 @@
     </button>
   </div>
 </div>
+

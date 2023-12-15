@@ -66,6 +66,8 @@ $fourFont: trailerParkGirl;
         #btnBar {
             display: none;
             border: none;
+            color: $firstColor;
+            margin-right: 10px;
             font-size: 1.4em;
             background: transparent;
         }
@@ -230,7 +232,9 @@ $fourFont: trailerParkGirl;
         #btnBar {
             display: none;
             border: none;
+            color: $firstColor;
             font-size: 1.4em;
+            margin-right: 10px;
             background: transparent;
         }
         .collapse {
@@ -274,14 +278,32 @@ $fourFont: trailerParkGirl;
         }
     }
     .containHeroes {
-        height: 76vh;
+        height: 78vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/heroesBackground.png');
         .row {
+            top: 50%;
+            left: 50%;
+            position: relative;
             text-align: center;
+            transform: translate(-50%, -50%);
             .col-lg-4 {
-                .img-fluid {
-                    margin: 20px;
+                #wonderWoman, #justiceLeague, #captainAmerica, #flash {
+                    margin: 32px;
+                    height: 200px;
+                    max-width: 380px;
+                }
+                #guardiansOfTheGalaxy {
+                    margin: 32px;
                     height: 250px;
-                    max-width: 450px;
+                    max-width: 300px;
+                }
+                #aquaman {
+                    margin: 32px;
+                    height: 300px;
+                    max-width: 550px;
                 }
             }
         }
@@ -337,7 +359,9 @@ $fourFont: trailerParkGirl;
         #btnBar {
             display: none;
             border: none;
+            color: $firstColor;
             font-size: 1.4em;
+            margin-right: 10px;
             background: transparent;
         }
         .collapse {
@@ -416,6 +440,11 @@ $fourFont: trailerParkGirl;
                     text-align: center;
                     color: $firstColor;
                     text-shadow: 0px 1px 5px $secondColor;
+                    .row {
+                        overflow: auto;
+                        max-height: 450px;
+                        margin-top: 20px;
+                    }
                 }
             }
         }
@@ -645,7 +674,914 @@ $fourFont: trailerParkGirl;
     }
 }
 
+// BATMAN-UNIVERS
+#batmanUnivers {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containBatmanUnivers {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/batmanUnivers.jpeg');
+        .citation {
+            text-align: center;
+            color: $firstColor;
+            padding-top: 10px;
+            font-family: $firstFont;
+            text-shadow: 0px 1px 5px $secondColor;
+        }
+        .row {
+            .col-lg-3 {
+                text-align: center;
+                .img-fluid {
+                    margin: 20px;
+                    height: 320px;
+                    max-width: 300px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// BATMAN-COMICS
+#batmanComics {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containBatmanComics {
+        height: 77vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/batmanUnivers.jpeg');
+        .row {
+            top: 50%;
+            left: 50%;
+            padding: 30px;
+            position: relative;
+            transform: translate(-50%, -50%);
+            .book {
+                .img-fluid {
+                    margin: auto;
+                    display: block;
+                    height: 540px;
+                    max-width: 450px;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+            .describe {
+                margin-left: -80px;
+                .title {
+                    font-size: 2.5em;
+                    color: $firstColor;
+                    text-align: center;
+                    font-family: $firstFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .creator {
+                    margin-top: 20px;
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.0em;
+                    font-family: $secondFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .story {
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.6em;
+                    line-height: 60px;
+                    font-family: $thirdFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .listBuy {
+                    .price {
+                        font-size: 1.8em;
+                        text-align: center;
+                        color: $firstColor;
+                        font-family: $secondFont;
+                        text-shadow: 0px 1px 5px $secondColor;
+                        #btnBuy {
+                            border: none;
+                            margin-left: 20px;
+                            background: transparent;
+                            a {
+                                color: azure;
+                                cursor: pointer;
+                                text-decoration: none;
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// SPIDERMAN-UNIVERS
+#spidermanUnivers {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containSpiderManUnivers{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/Wallpaper-Spider-Man-Wallpaper-Comics-Blo0p-Marvel-Comi10.jpg');
+        .citation {
+            text-align: center;
+            color: $firstColor;
+            padding-top: 10px;
+            font-family: $firstFont;
+            text-shadow: 0px 1px 5px $secondColor;
+        }
+        .row {
+            .col-lg-3 {
+                text-align: center;
+                .img-fluid {
+                    margin: 20px;
+                    height: 320px;
+                    max-width: 300px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// SPIDERMAN-COMICS
+#spidermanComics {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containSpiderManComics {
+        height: 77vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/spidermanWallpaper.jpg');
+        .row {
+            top: 50%;
+            left: 50%;
+            padding: 30px;
+            position: relative;
+            transform: translate(-50%, -50%);
+            .book {
+                .img-fluid {
+                    margin: auto;
+                    display: block;
+                    height: 540px;
+                    max-width: 450px;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+            .describe {
+                margin-left: -80px;
+                .title {
+                    font-size: 2.5em;
+                    color: $firstColor;
+                    text-align: center;
+                    font-family: $firstFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .creator {
+                    margin-top: 20px;
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.0em;
+                    font-family: $secondFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .story {
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.6em;
+                    line-height: 60px;
+                    font-family: $thirdFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .listBuy {
+                    .price {
+                        font-size: 1.8em;
+                        text-align: center;
+                        color: $firstColor;
+                        font-family: $secondFont;
+                        text-shadow: 0px 1px 5px $secondColor;
+                        #btnBuy {
+                            border: none;
+                            margin-left: 20px;
+                            background: transparent;
+                            a {
+                                color: azure;
+                                cursor: pointer;
+                                text-decoration: none;
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// SUPERMAN-UNIVERS
+#supermanUnivers {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containSupermanUnivers{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/supermanUnivers.jpeg');
+        .citation {
+            text-align: center;
+            color: $firstColor;
+            padding-top: 10px;
+            font-family: $firstFont;
+            text-shadow: 0px 1px 5px $secondColor;
+        }
+        .row {
+            .col-lg-3 {
+                text-align: center;
+                .img-fluid {
+                    margin: 20px;
+                    height: 320px;
+                    max-width: 300px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// SPIDERMAN-COMICS
+#supermanComics {
+    .navbar {
+        height: 120px;
+        padding-bottom: -10px;
+        align-items: center;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .navbar-brand {
+            .img-fluid {
+                height: 100px;
+                cursor: pointer;
+                max-width: 450px;
+                margin-left: 20px;
+            }
+        }
+        #btnBar {
+            display: none;
+            border: none;
+            color: $firstColor;
+            font-size: 1.4em;
+            margin-right: 10px;
+            background: transparent;
+        }
+        .collapse {
+            margin-top: -10px;
+            justify-content: end;
+            .navbar-nav {
+                column-gap: 60px;
+                margin-right: 50px;
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.6em;
+                        color: $firstColor;
+                        letter-spacing: 2px;
+                        font-family: $secondFont;
+                        text-decoration: none;
+                        &:hover {
+                            opacity: 0.8;
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+            #btnConnect {
+                height: 40px;
+                font-size: 1.2em;
+                margin-top: 6px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-bottom: 10px;
+                margin-right: 15px;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: $secondFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    color: $secondColor;
+                    background-color: $firstColor;
+                }
+            }
+        }
+    }
+    .containSupermanComics {
+        height: 77vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/supermanUnivers.jpeg');
+        .row {
+            top: 50%;
+            left: 50%;
+            padding: 30px;
+            position: relative;
+            transform: translate(-50%, -50%);
+            .book {
+                .img-fluid {
+                    margin: auto;
+                    display: block;
+                    height: 540px;
+                    max-width: 450px;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+            .describe {
+                margin-left: -80px;
+                .title {
+                    font-size: 2.5em;
+                    color: $firstColor;
+                    text-align: center;
+                    font-family: $firstFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .creator {
+                    margin-top: 20px;
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.0em;
+                    font-family: $secondFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .story {
+                    color: $firstColor;
+                    text-align: center;
+                    font-size: 1.6em;
+                    line-height: 60px;
+                    font-family: $thirdFont;
+                    text-shadow: 0px 1px 5px $secondColor;
+                }
+                .listBuy {
+                    .price {
+                        font-size: 1.8em;
+                        text-align: center;
+                        color: $firstColor;
+                        font-family: $secondFont;
+                        text-shadow: 0px 1px 5px $secondColor;
+                        #btnBuy {
+                            border: none;
+                            margin-left: 20px;
+                            background: transparent;
+                            a {
+                                color: azure;
+                                cursor: pointer;
+                                text-decoration: none;
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        height: 83px;
+        @include flex (row);
+        justify-content: space-between;
+        background-color: $secondColor;
+        .copy {
+            top: 10%;
+            left: 50%;
+            margin-top: 30px;
+            font-size: 1.6em;
+            position: relative;
+            color: $firstColor;
+            font-family: $secondFont;
+            transform: translate(-50%, -50%);
+        }
+        #btnContact {
+            border: none;
+            opacity: 0.8;
+            font-size: 1.4em;
+            color: $firstColor;
+            margin-right: 10px;
+            background: transparent;
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// SIDECANVAS
+#sideCanvas {
+    height: 190px;
+    max-width: 250px;
+    background-color: rgb(152, 152, 152);
+    border-radius: 0px 0px 0px 40px;
+    .offcanvas-header {
+        .btn-close {
+            font-size: 1.6em;
+            color: $firstColor;
+        }
+    }
+    .offcanvas-body {
+        margin-top: -25px;
+        margin-right: 21px;
+        .hrefList {
+            .href-item {
+                text-align: center;
+                list-style-type: none;
+                .href-link {
+                    font-size: 1.8em;
+                    color: $firstColor;
+                    font-family: $secondFont;
+                    text-decoration: none;
+                }
+            }
+        }
+        #btnConnect {
+            display: block;
+            margin: -10px auto;
+            padding-left: 25px;
+            font-size: 1.4em;
+            color: $firstColor;
+            font-family: $firstFont;
+            background: transparent;
+            border: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
 // MEDIA QUERY
-@media screen and (max-width: 1440px) {
-    
+@media screen and (max-width: 991px) {
+    #univers, #heroes, #search, #batmanUnivers, #supermanUnivers, #spidermanUnivers, #batmanComics, #supermanComics, #spidermanComics {
+        .navbar {
+            #btnBar {
+                display: block;
+            }
+        }
+    }
 }

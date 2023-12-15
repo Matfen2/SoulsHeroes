@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
+import { DomSanitizer } from '@angular/platform-browser';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
@@ -8,7 +9,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private sanitizer: DomSanitizer
+  ) {}
 
   results: any;
   searchedTitle: string = '';
@@ -19,6 +23,18 @@ export class SearchComponent implements OnInit {
     title: new FormControl('', Validators.required),
   });
 
+  sanitize(buffer: any) {
+    const base64 = btoa(
+      new Uint8Array(buffer.data).reduce(
+        (data, byte) => data + String.fromCharCode(byte),
+        ''
+      )
+    );
+    return this.sanitizer.bypassSecurityTrustUrl(
+      `data:image/jpeg;base64,${base64}`
+    );
+  }
+
   searchComics() {
     if (this.searchComicsList.valid) {
       this.loading = true;
@@ -27,6 +43,7 @@ export class SearchComponent implements OnInit {
 
       this.authService.searchComic(title).subscribe(
         (res) => {
+          console.log(res.data);
           this.results = res.data;
           this.searchedTitle = title ?? '';
           this.loading = false;
@@ -71,7 +88,5 @@ export class SearchComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 }
