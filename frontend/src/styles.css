@@ -576,45 +576,6 @@ body {
   background-color: rgb(125, 0, 0);
 }
 
-#contact #btnCloseModal {
-  top: 1%;
-  left: 97%;
-  cursor: pointer;
-  font-size: 1.4em;
-  position: absolute;
-  color: black;
-  background: azure;
-}
-#contact #btnCloseModal:hover {
-  opacity: 0.8;
-  transform: scale(0.8);
-}
-#contact .modal-dialog .modal-content {
-  background-color: rgb(136, 131, 131);
-}
-#contact .modal-dialog .modal-content .modal-body h2 {
-  text-align: center;
-  font-family: heyComic;
-}
-#contact .modal-dialog .modal-content .modal-body form {
-  margin: -5px auto;
-}
-#contact .modal-dialog .modal-content .modal-body form #btnSend {
-  padding: 10px;
-  display: block;
-  font-size: 1.1em;
-  margin: 15px auto;
-  color: azure;
-  border-radius: 20px;
-  font-family: suplexmentaryComicNC;
-  border: 1px solid azure;
-  background-color: darkgreen;
-}
-#contact .modal-dialog .modal-content .modal-body form #btnSend:hover {
-  transform: scale(1.1);
-  background-color: rgb(125, 0, 0);
-}
-
 #batmanUnivers .navbar {
   height: 120px;
   padding-bottom: -10px;
@@ -1467,6 +1428,59 @@ body {
 }
 #sideCanvas .offcanvas-body #btnConnect:hover {
   opacity: 0.8;
+}
+
+#message {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/pict/heroesBackground.png");
+}
+#message #btnCloseContact {
+  top: 1%;
+  left: 98%;
+  border: none;
+  font-size: 1.6em;
+  color: azure;
+  position: relative;
+  background: transparent;
+}
+#message .containMessage {
+  top: 43%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+#message .containMessage h2 {
+  text-align: center;
+  color: azure;
+  font-family: heyComic;
+}
+#message .containMessage .form-area form {
+  margin: auto;
+  display: block;
+}
+#message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+#message .containMessage .form-area form #btnSend {
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  display: block;
+  margin: 20px auto;
+  color: azure;
+  border-radius: 20px;
+  font-family: komika;
+  background: transparent;
+  border: 1px solid azure;
+}
+#message .containMessage .form-area form #btnSend:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 991px) {

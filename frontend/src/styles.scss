@@ -628,52 +628,6 @@ $fourFont: trailerParkGirl;
     }
 }
 
-// CONTACT
-#contact {
-    #btnCloseModal {
-        top: 1%;
-        left: 97%;
-        cursor: pointer;
-        font-size: 1.4em;
-        position: absolute;
-        color: $secondColor;
-        background: $firstColor;
-        &:hover {
-            opacity: 0.8;
-            transform: scale(0.8);
-        }
-    }
-    .modal-dialog {
-        .modal-content {
-            background-color: rgb(136, 131, 131);
-            .modal-body {
-                h2 {
-                    text-align: center;
-                    font-family: $firstFont;
-                }
-                form {
-                    margin: -5px auto;
-                    #btnSend {
-                        padding: 10px;
-                        display: block;
-                        font-size: 1.1em;
-                        margin: 15px auto;
-                        color: $firstColor;
-                        border-radius: 20px;
-                        font-family: $thirdFont;
-                        border: 1px solid $firstColor;
-                        background-color: $thirdColor;
-                        &:hover {
-                            transform: scale(1.1);
-                            background-color: $fourColor;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 // BATMAN-UNIVERS
 #batmanUnivers {
     .navbar {
@@ -1570,6 +1524,62 @@ $fourFont: trailerParkGirl;
             border: none;
             &:hover {
                 opacity: 0.8;
+            }
+        }
+    }
+}
+
+// CONTACT
+#message {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/pict/heroesBackground.png');
+    #btnCloseContact {
+        top: 1%;
+        left: 98%;
+        border: none;
+        font-size: 1.6em;
+        color: $firstColor;
+        position: relative;
+        background: transparent;
+    }
+    .containMessage {
+        top: 43%;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%, -50%);
+        h2 {
+            text-align: center;
+            color: $firstColor;
+            font-family: $firstFont;
+        }
+        .form-area {
+            form {
+                margin: auto;
+                display: block;
+                input, textarea {
+                    width: 20%;
+                    margin: auto;
+                    display: block;
+                }
+                #btnSend {
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    padding-bottom: 8px;
+                    display: block;
+                    margin: 20px auto;
+                    color: $firstColor;
+                    border-radius: 20px;
+                    font-family: $secondFont;
+                    background: transparent;
+                    border: 1px solid $firstColor;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
             }
         }
     }

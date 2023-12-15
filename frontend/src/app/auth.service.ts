@@ -27,6 +27,6 @@ export class AuthService {
 
   // MESSAGE
   giveMessage(data: any): Observable<any> {
-    return this._http.post(`${this.apiUrl}`, data);
+    return this._http.post(`${this.apiUrl}/message`, data);
   }
 }

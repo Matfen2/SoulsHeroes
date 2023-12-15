@@ -7,7 +7,6 @@ import { SignupComponent } from './signup/signup.component';
 import { UniversComponent } from './univers/univers.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { ComicsShowDirective } from '../comics-show.directive';
 import { HeroesDirective } from '../heroes.directive';
 import { BatmanUniversComponent } from './batman-univers/batman-univers.component';
@@ -16,13 +15,14 @@ import { SpidermanUniversComponent } from './spiderman-univers/spiderman-univers
 import { BatmanComicsComponent } from './batman-comics/batman-comics.component';
 import { SpidermanComicsComponent } from './spiderman-comics/spiderman-comics.component';
 import { SupermanComicsComponent } from './superman-comics/superman-comics.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routesPages: Routes = [
   { path: 'univers', component: UniversComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'heroes', component: HeroesComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'batman-univers', component: BatmanUniversComponent },
   { path: 'superman-univers', component: SupermanUniversComponent },
   { path: 'spiderman-univers', component: SpidermanUniversComponent },
@@ -38,7 +38,6 @@ const routesPages: Routes = [
     SignupComponent,
     UniversComponent,
     SearchComponent,
-    HeroesComponent,
     HeroesDirective,
     ComicsShowDirective,
     BatmanUniversComponent,
@@ -47,6 +46,7 @@ const routesPages: Routes = [
     BatmanComicsComponent,
     SpidermanComicsComponent,
     SupermanComicsComponent,
+    ContactComponent,
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,28 @@
+<section id="message">
+    <button type="button" id="btnCloseContact" [routerLink]="'/univers'"><i class="fas fa-times"></i></button>
+    <div class="containMessage">
+        <h2>CONTACTEZ-NOUS :</h2>
+        <div class="form-area">
+            <div class="alert alert-success" style="width: 20%; display: block; margin: 5px auto" role="alert" *ngIf="successmsg">
+            <p>Message envoyé avec succès</p>
+        </div>
+        <div class="alert alert-danger" style="width: 20%; display: block; margin: 5px auto" role="alert" *ngIf="errormsg">
+            <p>Message non envoyé</p>
+        </div>
+            <form [formGroup]="answer" (ngSubmit)="sendMessage()">
+                <label></label>
+                <input type="text" name="adress" class="form-control" placeholder="Adresse email" formControlName="adress" required />
+
+                <label></label>
+                <input type="text" name="subject" class="form-control" placeholder="Sujet" formControlName="subject" required />
+
+                <label></label>
+                <textarea name="message" placeholder="Message" class="form-control" minlength="300" cols="30" rows="10" formControlName="message" required></textarea>
+
+                <button type="submit" id="btnSend">ENVOYER</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+

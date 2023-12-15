@@ -106,23 +106,23 @@ app.get("/comics/:title", (req, res) => {
 
 // MESSAGE
 app.post("/message", (req, res) => {
-  let pseudo = req.body.pseudo;
+  let adress = req.body.adress;
   let subject = req.body.subject;
-  let message = req.body.date;
-  let qr = `insert into games (pseudo, subject, message) values (?, ?, ?)`;
+  let message = req.body.message;
+  let qr = `insert into message (adress, subject, message) values (?, ?, ?)`;
 
-  db.query(qr, [pseudo, subject, message], (error, result) => {
+  db.query(qr, [adress, subject, message], (error, result) => {
     if (error) {
       console.log(error);
       res.status(500).send({ message: "Internal servor error" });
     }
     if (result.affectedRows > 0) {
       res.send({
-        message: "Succès de l'envoie du message",
+        message: "post message success",
       });
     } else {
       res.send({
-        message: "Echec de l'envoie du message",
+        message: "post message error",
       });
     }
   });

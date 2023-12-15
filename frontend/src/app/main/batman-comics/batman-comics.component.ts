@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-batman-comics',
   templateUrl: './batman-comics.component.html',
   styleUrls: ['./batman-comics.component.css'],
 })
 export class BatmanComicsComponent implements OnInit {
-  constructor(
-    private routes: ActivatedRoute
-  ) {}
+  constructor(private routes: ActivatedRoute) {}
 
   batmanId!: number;
   batmanDetails: any;
