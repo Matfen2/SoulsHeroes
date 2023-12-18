@@ -567,6 +567,7 @@ body {
   margin: 8px auto;
   color: azure;
   border-radius: 20px;
+  letter-spacing: 2px;
   font-family: heyComic;
   border: 1px solid azure;
   background-color: darkgreen;
@@ -1393,7 +1394,7 @@ body {
 }
 
 #sideCanvas {
-  height: 190px;
+  height: 160px;
   max-width: 250px;
   background-color: rgb(152, 152, 152);
   border-radius: 0px 0px 0px 40px;
@@ -1475,6 +1476,7 @@ body {
   margin: 20px auto;
   color: azure;
   border-radius: 20px;
+  letter-spacing: 3px;
   font-family: komika;
   background: transparent;
   border: 1px solid azure;
@@ -1483,8 +1485,416 @@ body {
   transform: scale(1.2);
 }
 
+@media screen and (max-width: 1440px) {
+  #message #btnCloseContact {
+    left: 97%;
+  }
+  #message .containMessage {
+    top: 42%;
+  }
+  #login #btnCloseConnect {
+    left: 97%;
+  }
+  #signup #btnCloseConnect {
+    left: 97%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row {
+    margin: -10px auto;
+    display: block;
+    overflow: auto;
+    max-height: 510px;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row .comic {
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0%);
+    width: 350px;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch #otherComics {
+    margin-top: 30px;
+  }
+  #message .containMessage .form-area form {
+    margin: -10px auto;
+  }
+  #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 30%;
+  }
+  #batmanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid {
+    max-width: 200px;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 55%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+}
 @media screen and (max-width: 991px) {
   #univers .navbar #btnBar, #heroes .navbar #btnBar, #search .navbar #btnBar, #batmanUnivers .navbar #btnBar, #supermanUnivers .navbar #btnBar, #spidermanUnivers .navbar #btnBar, #batmanComics .navbar #btnBar, #supermanComics .navbar #btnBar, #spidermanComics .navbar #btnBar {
     display: block;
+  }
+  #message #btnCloseContact {
+    left: 95%;
+  }
+  #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 50%;
+  }
+  #batmanComics .containBatmanComics, #batmanComics .containSupermanComics, #batmanComics .containSpiderManComics, #supermanComics .containBatmanComics, #supermanComics .containSupermanComics, #supermanComics .containSpiderManComics, #spidermanComics .containBatmanComics, #spidermanComics .containSupermanComics, #spidermanComics .containSpiderManComics {
+    height: 118vh;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 55%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #univers .containUnivers .row .symbol .listSymbol .img-fluid {
+    height: 320px;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .best {
+    font-size: 2.2em;
+  }
+  #batmanUnivers .containBatmanUnivers .citation, #batmanUnivers .containSupermanUnivers .citation, #batmanUnivers .containSpiderManUnivers .citation, #supermanUnivers .containBatmanUnivers .citation, #supermanUnivers .containSupermanUnivers .citation, #supermanUnivers .containSpiderManUnivers .citation, #spidermanUnivers .containBatmanUnivers .citation, #spidermanUnivers .containSupermanUnivers .citation, #spidermanUnivers .containSpiderManUnivers .citation {
+    font-size: 1.7em;
+  }
+  #batmanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid {
+    height: 480px;
+    max-width: 400px;
+  }
+  #batmanComics .containBatmanComics, #batmanComics .containSupermanComics, #batmanComics .containSpiderManComics, #supermanComics .containBatmanComics, #supermanComics .containSupermanComics, #supermanComics .containSpiderManComics, #spidermanComics .containBatmanComics, #spidermanComics .containSupermanComics, #spidermanComics .containSpiderManComics {
+    height: 115vh;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 52%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+  #login #btnCloseConnect {
+    left: 94%;
+  }
+  #signup #btnCloseConnect {
+    left: 95%;
+  }
+  #signup .containSignUp {
+    top: 27%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch {
+    height: 82vh;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row {
+    margin-top: 2px;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row .comic {
+    max-width: 450px;
+  }
+  #batmanUnivers .containBatmanUnivers .citation, #batmanUnivers .containSupermanUnivers .citation, #batmanUnivers .containSpiderManUnivers .citation, #supermanUnivers .containBatmanUnivers .citation, #supermanUnivers .containSupermanUnivers .citation, #supermanUnivers .containSpiderManUnivers .citation, #spidermanUnivers .containBatmanUnivers .citation, #spidermanUnivers .containSupermanUnivers .citation, #spidermanUnivers .containSpiderManUnivers .citation {
+    font-size: 1.5em;
+  }
+  #batmanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid {
+    height: 480px;
+    max-width: 270px;
+  }
+  #batmanUnivers .footer .copy, #supermanUnivers .footer .copy, #spidermanUnivers .footer .copy {
+    font-size: 1.4em;
+  }
+  #batmanComics .containBatmanComics, #batmanComics .containSupermanComics, #batmanComics .containSpiderManComics, #supermanComics .containBatmanComics, #supermanComics .containSupermanComics, #supermanComics .containSpiderManComics, #spidermanComics .containBatmanComics, #spidermanComics .containSupermanComics, #spidermanComics .containSpiderManComics {
+    height: 146vh;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 52%;
+    left: 53%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+  #batmanComics .footer .copy, #supermanComics .footer .copy, #spidermanComics .footer .copy {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+  #batmanComics .footer #btnContact, #supermanComics .footer #btnContact, #spidermanComics .footer #btnContact {
+    margin-top: 2px;
+  }
+  #batmanComics .footer #btnContact .fa-message, #supermanComics .footer #btnContact .fa-message, #spidermanComics .footer #btnContact .fa-message {
+    font-size: 1.2em;
+  }
+  #message #btnCloseContact {
+    left: 91%;
+  }
+  #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 60%;
+  }
+  #login #btnCloseConnect {
+    left: 92%;
+  }
+  #signup #btnCloseConnect {
+    left: 93%;
+  }
+  #signup .containSignUp form .register {
+    font-size: 1.8em;
+  }
+  #signup .containSignUp form input {
+    margin: auto;
+    display: block;
+    width: 80%;
+  }
+  #search .containSearch form {
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -250%);
+  }
+  #search .containSearch .results {
+    margin-top: -50px;
+  }
+  #search .containSearch .results .resultsSearch {
+    margin-top: 80px;
+  }
+  #search .footer .copy {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+  #search .footer #btnContact {
+    margin-top: 2px;
+  }
+  #search .footer #btnContact .fa-message {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 375px) {
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .best {
+    font-size: 1.8em;
+  }
+  #univers .footer .copy {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+  #univers .footer #btnContact {
+    margin-top: 2px;
+  }
+  #univers .footer #btnContact .fa-message {
+    font-size: 1.2em;
+  }
+  #batmanUnivers .footer .copy {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+  #batmanUnivers .footer #btnContact {
+    margin-top: 2px;
+  }
+  #batmanUnivers .footer #btnContact .fa-message {
+    font-size: 1.2em;
+  }
+  #batmanComics .containBatmanComics, #batmanComics .containSupermanComics, #batmanComics .containSpiderManComics, #supermanComics .containBatmanComics, #supermanComics .containSupermanComics, #supermanComics .containSpiderManComics, #spidermanComics .containBatmanComics, #spidermanComics .containSupermanComics, #spidermanComics .containSpiderManComics {
+    height: 158vh;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 51%;
+    left: 53%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+  #batmanComics .footer .copy, #supermanComics .footer .copy, #spidermanComics .footer .copy {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-left: -20px;
+  }
+  #batmanComics .footer #btnContact, #supermanComics .footer #btnContact, #spidermanComics .footer #btnContact {
+    margin-top: 2px;
+  }
+  #batmanComics .footer #btnContact .fa-message, #supermanComics .footer #btnContact .fa-message, #spidermanComics .footer #btnContact .fa-message {
+    font-size: 1.2em;
+  }
+  #message #btnCloseContact {
+    top: 0%;
+    left: 90%;
+  }
+  #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 70%;
+  }
+  #login #btnCloseConnect {
+    left: 90%;
+  }
+  #signup #btnCloseConnect {
+    left: 91%;
+  }
+  #signup .containSignUp form .register {
+    font-size: 1.8em;
+  }
+  #signup .containSignUp form input {
+    margin: auto;
+    display: block;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .best {
+    font-size: 1.4em;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row {
+    margin-top: 2px;
+  }
+  #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch .row .comic {
+    max-width: 300px;
+  }
+  #univers .footer .copy {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  #batmanUnivers .footer .copy, #supermanUnivers .footer .copy, #spidermanUnivers .footer .copy {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  #batmanComics .containBatmanComics, #batmanComics .containSupermanComics, #batmanComics .containSpiderManComics, #supermanComics .containBatmanComics, #supermanComics .containSupermanComics, #supermanComics .containSpiderManComics, #spidermanComics .containBatmanComics, #spidermanComics .containSupermanComics, #spidermanComics .containSpiderManComics {
+    height: 176vh;
+  }
+  #batmanComics .containBatmanComics .row, #batmanComics .containSupermanComics .row, #batmanComics .containSpiderManComics .row, #supermanComics .containBatmanComics .row, #supermanComics .containSupermanComics .row, #supermanComics .containSpiderManComics .row, #spidermanComics .containBatmanComics .row, #spidermanComics .containSupermanComics .row, #spidermanComics .containSpiderManComics .row {
+    top: 52%;
+    left: 53%;
+  }
+  #batmanComics .containBatmanComics .row .book, #batmanComics .containSupermanComics .row .book, #batmanComics .containSpiderManComics .row .book, #supermanComics .containBatmanComics .row .book, #supermanComics .containSupermanComics .row .book, #supermanComics .containSpiderManComics .row .book, #spidermanComics .containBatmanComics .row .book, #spidermanComics .containSupermanComics .row .book, #spidermanComics .containSpiderManComics .row .book {
+    top: 40%;
+    left: 0%;
+    position: relative;
+    transform: translate(0%, -5%);
+  }
+  #batmanComics .containBatmanComics .row .describe, #batmanComics .containSupermanComics .row .describe, #batmanComics .containSpiderManComics .row .describe, #supermanComics .containBatmanComics .row .describe, #supermanComics .containSupermanComics .row .describe, #supermanComics .containSpiderManComics .row .describe, #spidermanComics .containBatmanComics .row .describe, #spidermanComics .containSupermanComics .row .describe, #spidermanComics .containSpiderManComics .row .describe {
+    margin-left: -5px;
+  }
+  #batmanComics .containBatmanComics .row .describe .title, #batmanComics .containSupermanComics .row .describe .title, #batmanComics .containSpiderManComics .row .describe .title, #supermanComics .containBatmanComics .row .describe .title, #supermanComics .containSupermanComics .row .describe .title, #supermanComics .containSpiderManComics .row .describe .title, #spidermanComics .containBatmanComics .row .describe .title, #spidermanComics .containSupermanComics .row .describe .title, #spidermanComics .containSpiderManComics .row .describe .title {
+    font-size: 2em;
+  }
+  #batmanComics .containBatmanComics .row .describe .story, #batmanComics .containSupermanComics .row .describe .story, #batmanComics .containSpiderManComics .row .describe .story, #supermanComics .containBatmanComics .row .describe .story, #supermanComics .containSupermanComics .row .describe .story, #supermanComics .containSpiderManComics .row .describe .story, #spidermanComics .containBatmanComics .row .describe .story, #spidermanComics .containSupermanComics .row .describe .story, #spidermanComics .containSpiderManComics .row .describe .story {
+    line-height: 30px;
+  }
+  #batmanComics .footer .copy, #supermanComics .footer .copy, #spidermanComics .footer .copy {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  #search .containSearch form {
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -250%);
+  }
+  #search .containSearch .results {
+    margin-top: -50px;
+  }
+  #search .containSearch .results .searchResult {
+    font-size: 1.4em;
+  }
+  #search .containSearch .results .resultsSearch {
+    margin-top: 80px;
+  }
+  #search .containSearch .results .resultsSearch .row .col-lg-4 {
+    margin: auto;
+    display: block;
+    max-width: 280px;
+  }
+  #search .containSearch .results .resultsSearch .row .col-lg-4 .img-fluid {
+    max-width: 250px;
+  }
+  #search .footer .copy {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  #search .footer #btnContact {
+    margin-top: -2px;
+  }
+  #login #btnCloseConnect {
+    left: 89%;
+  }
+  #login .containLogIn form input {
+    width: 70%;
+  }
+  #signup #btnCloseConnect {
+    left: 89%;
+  }
+  #signup .containSignUp {
+    top: 25%;
+  }
+  #signup .containSignUp form .register {
+    font-size: 1.8em;
+  }
+  #signup .containSignUp form input {
+    margin: auto;
+    display: block;
+    width: 80%;
   }
 }/*# sourceMappingURL=styles.css.map */

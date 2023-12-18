@@ -616,6 +616,7 @@ $fourFont: trailerParkGirl;
                 margin: 8px auto;
                 color: $firstColor;
                 border-radius: 20px;
+                letter-spacing: 2px;
                 font-family: $firstFont;
                 border: 1px solid $firstColor;
                 background-color: $thirdColor;
@@ -1488,7 +1489,7 @@ $fourFont: trailerParkGirl;
 
 // SIDECANVAS
 #sideCanvas {
-    height: 190px;
+    height: 160px;
     max-width: 250px;
     background-color: rgb(152, 152, 152);
     border-radius: 0px 0px 0px 40px;
@@ -1573,6 +1574,7 @@ $fourFont: trailerParkGirl;
                     margin: 20px auto;
                     color: $firstColor;
                     border-radius: 20px;
+                    letter-spacing: 3px;
                     font-family: $secondFont;
                     background: transparent;
                     border: 1px solid $firstColor;
@@ -1586,11 +1588,645 @@ $fourFont: trailerParkGirl;
 }
 
 // MEDIA QUERY
+@media screen and (max-width: 1440px) {
+    #message {
+        #btnCloseContact {
+            left: 97%;
+        }
+        .containMessage {
+            top: 42%;
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 97%;
+        }
+    }
+    #signup {
+        #btnCloseConnect {
+            left: 97%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #univers {
+        .containUnivers {
+            .row {
+                .univers {
+                    .showUnivers {
+                        .detailsSwitch {
+                            .containHeroes {
+                                .infoSwitch {
+                                    .row {
+                                        margin: -10px auto;
+                                        display: block;
+                                        overflow: auto;
+                                        max-height: 510px;
+                                        .comic {
+                                            top: 50%;
+                                            left: 50%;
+                                            position: relative;
+                                            transform: translate(-50%, 0%);
+                                            width: 350px;
+                                        }
+                                    }
+                                    #otherComics {
+                                        margin-top: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #message {
+        .containMessage {
+            .form-area {
+                form {
+                    margin: -10px auto;
+                    input, textarea {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    #batmanUnivers, #supermanUnivers, #spidermanUnivers{
+        .containBatmanUnivers, .containSupermanUnivers, .containSpiderManUnivers {
+            .row {
+                .col-lg-3 {
+                    .img-fluid {
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            .row {
+                top: 55%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 991px) {
     #univers, #heroes, #search, #batmanUnivers, #supermanUnivers, #spidermanUnivers, #batmanComics, #supermanComics, #spidermanComics {
         .navbar {
             #btnBar {
                 display: block;
+            }
+        }
+    }
+    #message {
+        #btnCloseContact {
+            left: 95%;
+        }
+        .containMessage {
+            .form-area {
+                form {
+                    input, textarea {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            height: 118vh;
+            .row {
+                top: 55%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #univers {
+        .containUnivers {
+            .row {
+                .symbol {
+                    .listSymbol {
+                        .img-fluid {
+                            height: 320px;
+                        }
+                    }
+                }
+                .univers {
+                    .showUnivers {
+                        .detailsSwitch {
+                            .containHeroes {
+                                .infoSwitch {
+                                    .best {
+                                        font-size: 2.2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #batmanUnivers, #supermanUnivers, #spidermanUnivers{
+        .containBatmanUnivers, .containSupermanUnivers, .containSpiderManUnivers {
+            .citation {
+                font-size: 1.7em;
+            }
+            .row {
+                .col-lg-3 {
+                    .img-fluid {
+                        height: 480px;
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            height: 115vh;
+            .row {
+                top: 52%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 94%;
+        }
+    }
+    #signup {
+        #btnCloseConnect {
+            left: 95%;
+        }
+        .containSignUp {
+            top: 27%;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #univers {
+        .containUnivers {
+            .row {
+                .univers {
+                    .showUnivers {
+                        .detailsSwitch {
+                            .containHeroes {
+                                .infoSwitch {
+                                    height: 82vh;
+                                    .row {
+                                        margin-top: 2px;
+                                        .comic {
+                                            max-width: 450px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #batmanUnivers, #supermanUnivers, #spidermanUnivers {
+        .containBatmanUnivers, .containSupermanUnivers, .containSpiderManUnivers {
+            .citation {
+                font-size: 1.5em;
+            }
+            .row {
+                .col-lg-3 {
+                    .img-fluid {
+                        height: 480px;
+                        max-width: 270px;
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.4em;
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            height: 146vh;
+            .row {
+                top: 52%;
+                left: 53%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: 2px;
+                .fa-message {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    #message {
+        #btnCloseContact {
+            left: 91%;
+        }
+        .containMessage {
+            .form-area {
+                form {
+                    input, textarea {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 92%;
+        }
+    }
+    #signup {
+        #btnCloseConnect {
+            left: 93%;
+        }
+        .containSignUp {
+            form {
+                .register {
+                    font-size: 1.8em;
+                }
+                input {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                }
+            }
+        }
+    }
+    #search {
+        .containSearch {
+            form {
+                top: 50%;
+                left: 50%;
+                position: relative;
+                transform: translate(-50%, -250%);
+            }
+            .results {
+                margin-top: -50px;
+                .resultsSearch {
+                    margin-top: 80px;
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: 2px;
+                .fa-message {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #univers {
+        .containUnivers {
+            .row {
+                .univers {
+                    .showUnivers {
+                        .detailsSwitch {
+                            .containHeroes {
+                                .infoSwitch {
+                                    .best {
+                                        font-size: 1.8em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: 2px;
+                .fa-message {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    #batmanUnivers {
+        .footer {
+            .copy {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: 2px;
+                .fa-message {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            height: 158vh;
+            .row {
+                top: 51%;
+                left: 53%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: 2px;
+                .fa-message {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    #message {
+        #btnCloseContact {
+            top: 0%;
+            left: 90%;
+        }
+        .containMessage {
+            .form-area {
+                form {
+                    input, textarea {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 90%;
+        }
+    }
+    #signup {
+        #btnCloseConnect {
+            left: 91%;
+        }
+        .containSignUp {
+            form {
+                .register {
+                    font-size: 1.8em;
+                }
+                input {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #univers {
+        .containUnivers {
+            .row {
+                .univers {
+                    .showUnivers {
+                        .detailsSwitch {
+                            .containHeroes {
+                                .infoSwitch {
+                                    .best {
+                                        font-size: 1.4em;
+                                    }
+                                    .row {
+                                        margin-top: 2px;
+                                        .comic {
+                                            max-width: 300px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                margin-left: -20px;
+            }
+        }
+    }
+    #batmanUnivers, #supermanUnivers, #spidermanUnivers {
+        .footer {
+            .copy {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                margin-left: -20px;
+            }
+        }
+    }
+    #batmanComics, #supermanComics, #spidermanComics {
+        .containBatmanComics, .containSupermanComics, .containSpiderManComics {
+            height: 176vh;
+            .row {
+                top: 52%;
+                left: 53%;
+                .book {
+                    top: 40%;
+                    left: 0%;
+                    position: relative;
+                    transform: translate(-00%, -5%);
+                }
+                .describe {
+                    margin-left: -5px;
+                    .title {
+                        font-size: 2.0em;
+                    }
+                    .story {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                margin-left: -20px;
+            }
+        }
+    }
+    #search {
+        .containSearch {
+            form {
+                top: 50%;
+                left: 50%;
+                position: relative;
+                transform: translate(-50%, -250%);
+            }
+            .results {
+                margin-top: -50px;
+                .searchResult {
+                    font-size: 1.4em;
+                }
+                .resultsSearch {
+                    margin-top: 80px;
+                    .row {
+                        .col-lg-4 {
+                            margin: auto;
+                            display: block;
+                            max-width: 280px;
+                            .img-fluid {
+                                max-width: 250px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .copy {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                margin-left: -20px;
+            }
+            #btnContact {
+                margin-top: -2px;
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 89%;
+        }
+        .containLogIn {
+            form {
+                input {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    #signup {
+        #btnCloseConnect {
+            left: 89%;
+        }
+        .containSignUp {
+            top: 25%;
+            form {
+                .register {
+                    font-size: 1.8em;
+                }
+                input {
+                    margin: auto;
+                    display: block;
+                     width: 80%;
+                }
             }
         }
     }

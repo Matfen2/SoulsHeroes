@@ -31,7 +31,6 @@
                         <div class="col-lg-4" *ngFor="let result of results">
                             <img [src]="sanitize(result.book)" style="height: 400px; max-width: 300px;" class="img-fluid w-100" />
                             <p>{{result.title}}</p>
-                             <button type="button" id="btnBuy" [routerLink]="result.buy">ACHETER</button>
                         </div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@
 
     <div class="footer">
         <div class="copy">© SOUL'S HEROES 2023</div>
-        <button type="button" id="btnContact" data-bs-toggle="modal" data-bs-target="#contact"><i class="fa-solid fa-message"></i></button>
+        <button type="button" id="btnContact" [routerLink]="'/contact'"><i class="fa-solid fa-message"></i></button>
     </div>
 </section>
 
