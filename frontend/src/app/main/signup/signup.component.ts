@@ -1,35 +1,43 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/auth.service';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  successmsg: any = '';
-  errormsg: any = '';
-  errorMessage: string = '';
+  successmsg: any = "Succès de l'enregistrement";
+  errormsg: any = "Echec de l'enregistrement";
 
-  user = {
-    pseudo: '',
-    adress: '',
-    phone: '',
-    pass: '',
-  };
+  signup: FormGroup;
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private formBuilder: FormBuilder
+  ) {
+    this.signup = this.formBuilder.group({
+      pseudo: ['', Validators.required],
+      adress: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$'),
+        ],
+      ],
+      phone: ['', Validators.required],
+      pass: ['', Validators.required],
+    });
+  }
 
-  signup() {
-    this.authService.registerMember(this.user).subscribe(
+  register() {
+    this.authService.registerMember(this.signup.value).subscribe(
       (res) => {
-        this.successmsg = true;
-        this.errormsg = false;
-        this.errorMessage = '';
+        alert(res.message);
       },
       (error) => {
-        this.successmsg = false;
-        this.errormsg = true;
-        this.errorMessage = error.error.message || "Erreur d'enregistrement";
+        alert(error.error.message);
       }
     );
   }

@@ -541,6 +541,7 @@ $fourFont: trailerParkGirl;
                 display: block;
                 font-size: 1.2em;
                 margin: 8px auto;
+                cursor: pointer;
                 color: $firstColor;
                 border-radius: 20px;
                 font-family: $firstFont;
@@ -614,6 +615,7 @@ $fourFont: trailerParkGirl;
                 display: block;
                 font-size: 1.2em;
                 margin: 8px auto;
+                cursor: pointer;
                 color: $firstColor;
                 border-radius: 20px;
                 letter-spacing: 2px;
@@ -1566,6 +1568,13 @@ $fourFont: trailerParkGirl;
                     margin: auto;
                     display: block;
                 }
+                .warning {
+                    .alert {
+                        width: 20%;
+                        margin: auto;
+                        display: block;
+                    }
+                }
                 #btnSend {
                     padding-left: 9px;
                     padding-right: 9px;
@@ -1649,6 +1658,11 @@ $fourFont: trailerParkGirl;
                     margin: -10px auto;
                     input, textarea {
                         width: 30%;
+                    }
+                    .warning {
+                        .alert {
+                            width: 30%;
+                        }
                     }
                 }
             }
@@ -1814,6 +1828,19 @@ $fourFont: trailerParkGirl;
             top: 27%;
         }
     }
+    #message {
+        .containMessage {
+            .form-area {
+                form {
+                    .warning {
+                        .alert {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -1906,6 +1933,11 @@ $fourFont: trailerParkGirl;
                 form {
                     input, textarea {
                         width: 60%;
+                    }
+                    .warning {
+                        .alert {
+                            width: 60%;
+                        }
                     }
                 }
             }
@@ -2059,6 +2091,11 @@ $fourFont: trailerParkGirl;
                 form {
                     input, textarea {
                         width: 70%;
+                    }
+                    .warning {
+                        .alert {
+                            width: 70%;
+                        }
                     }
                 }
             }
@@ -2226,6 +2263,19 @@ $fourFont: trailerParkGirl;
                     margin: auto;
                     display: block;
                      width: 80%;
+                }
+            }
+        }
+    }
+    #message {
+        .containMessage {
+            .form-area {
+                form {
+                    .warning {
+                        .alert {
+                            width: 80%;
+                        }
+                    }
                 }
             }
         }

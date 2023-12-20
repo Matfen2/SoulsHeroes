@@ -10,24 +10,24 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
+  successmsg: any = 'Message envoyé avec succès';
+  errormsg: any = "Echec de l'envoie du message";
+
   answer = new FormGroup({
     adress: new FormControl('', Validators.required),
     subject: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
   });
 
-  successmsg: any = '';
-  errormsg: any = '';
-
   sendMessage() {
     this.authService.giveMessage(this.answer.value).subscribe(
       (res) => {
-        this.successmsg = true;
-        this.errormsg = false;
+        alert(this.successmsg);
       },
       (error) => {
         this.successmsg = false;
         this.errormsg = true;
+        alert(this.errormsg);
       }
     );
   }

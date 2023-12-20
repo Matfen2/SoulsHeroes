@@ -495,6 +495,7 @@ body {
   display: block;
   font-size: 1.2em;
   margin: 8px auto;
+  cursor: pointer;
   color: azure;
   border-radius: 20px;
   font-family: heyComic;
@@ -565,6 +566,7 @@ body {
   display: block;
   font-size: 1.2em;
   margin: 8px auto;
+  cursor: pointer;
   color: azure;
   border-radius: 20px;
   letter-spacing: 2px;
@@ -1468,6 +1470,11 @@ body {
   margin: auto;
   display: block;
 }
+#message .containMessage .form-area form .warning .alert {
+  width: 20%;
+  margin: auto;
+  display: block;
+}
 #message .containMessage .form-area form #btnSend {
   padding-left: 9px;
   padding-right: 9px;
@@ -1520,6 +1527,9 @@ body {
     margin: -10px auto;
   }
   #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 30%;
+  }
+  #message .containMessage .form-area form .warning .alert {
     width: 30%;
   }
   #batmanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #batmanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #supermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containBatmanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSupermanUnivers .row .col-lg-3 .img-fluid, #spidermanUnivers .containSpiderManUnivers .row .col-lg-3 .img-fluid {
@@ -1620,6 +1630,9 @@ body {
   #signup .containSignUp {
     top: 27%;
   }
+  #message .containMessage .form-area form .warning .alert {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 425px) {
   #univers .containUnivers .row .univers .showUnivers .detailsSwitch .containHeroes .infoSwitch {
@@ -1678,6 +1691,9 @@ body {
     left: 91%;
   }
   #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 60%;
+  }
+  #message .containMessage .form-area form .warning .alert {
     width: 60%;
   }
   #login #btnCloseConnect {
@@ -1782,6 +1798,9 @@ body {
     left: 90%;
   }
   #message .containMessage .form-area form input, #message .containMessage .form-area form textarea {
+    width: 70%;
+  }
+  #message .containMessage .form-area form .warning .alert {
     width: 70%;
   }
   #login #btnCloseConnect {
@@ -1895,6 +1914,9 @@ body {
   #signup .containSignUp form input {
     margin: auto;
     display: block;
+    width: 80%;
+  }
+  #message .containMessage .form-area form .warning .alert {
     width: 80%;
   }
 }/*# sourceMappingURL=styles.css.map */

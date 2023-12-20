@@ -3,23 +3,29 @@
     <div class="containMessage">
         <h2>CONTACTEZ-NOUS :</h2>
         <div class="form-area">
-            <div class="alert alert-success" style="width: 20%; display: block; margin: 5px auto" role="alert" *ngIf="successmsg">
-            <p>Message envoyé avec succès</p>
-        </div>
-        <div class="alert alert-danger" style="width: 20%; display: block; margin: 5px auto" role="alert" *ngIf="errormsg">
-            <p>Message non envoyé</p>
-        </div>
             <form [formGroup]="answer" (ngSubmit)="sendMessage()">
                 <label></label>
-                <input type="text" name="adress" class="form-control" placeholder="Adresse email" formControlName="adress" required />
+                    <input type="email" class="form-control" name="adress" placeholder="Adresse email" formControlName="adress" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" minlength="15" [ngClass]="{ 'is.invalid': answer.get('adress')?.touched && answer.get('adress')?.invalid }" />
+                    <div class="warning" *ngIf="answer.get('adress')?.invalid && (answer.get('adress')?.dirty || answer.get('adress')?.touched)">
+                        <div class="alert alert-danger" *ngIf="answer.get('adress')?.hasError('required')">L'adresse email est requise</div>
+                        <div class="alert alert-danger" *ngIf="answer.get('adress')?.hasError('pattern')">La forme de l'adresse email est incorrecte</div>
+                        <div class="alert alert-danger" *ngIf="answer.get('adress')?.hasError('minlength')">L'adresse email doit avoir au moins 15 caractères</div>
+                    </div>
 
                 <label></label>
-                <input type="text" name="subject" class="form-control" placeholder="Sujet" formControlName="subject" required />
+                <input type="text" class="form-control" name="subject" placeholder="Sujet de conversation" formControlName="subject" [ngClass]="{ 'is.invalid': answer.get('subject')?.touched && answer.get('subject')?.invalid }" />
+                    <div class="warning" *ngIf="answer.get('subject')?.invalid && (answer.get('subject')?.dirty || answer.get('subject')?.touched)">
+                        <div class="alert alert-danger" *ngIf="answer.get('subject')?.hasError('required')">Le sujet de conversation est requis</div>
+                    </div>
 
                 <label></label>
-                <textarea name="message" placeholder="Message" class="form-control" minlength="300" cols="30" rows="10" formControlName="message" required></textarea>
+                    <textarea name="message" placeholder="Message" formControlName="message" minlength="300" cols="20" rows="7" [ngClass]="{ 'is.invalid': answer.get('message')?.touched && answer.get('message')?.invalid }"></textarea>
+                    <div class="warning" *ngIf="answer.get('message')?.invalid && (answer.get('message')?.dirty || answer.get('message')?.touched)">
+                        <div class="alert alert-danger" *ngIf="answer.get('message')?.hasError('required')">Le message est requis</div>
+                        <div class="alert alert-danger" *ngIf="answer.get('message')?.hasError('minlength')">Le message doit avoir au moins 300 caractères</div>
+                    </div>
 
-                <button type="submit" id="btnSend">ENVOYER</button>
+                <button type="submit" id="btnSend" [disabled]="answer.invalid">ENVOYER</button>
             </form>
         </div>
     </div>

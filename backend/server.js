@@ -34,7 +34,7 @@ app.post('/login', (req, res) => {
 
     let qr = `SELECT * FROM user WHERE adress = ? AND pass = ?`;
 
-    db.query(qr, [adress, pass], (req, res) => {
+    db.query(qr, [adress, pass], (error, results) => {
         if (!error) {
           if (results.length > 0) {
             return res.status(200).send({ message: "Connexion réussie" });
@@ -44,8 +44,9 @@ app.post('/login', (req, res) => {
         } else {
           return res.status(500).send({ message: "Erreur interne du serveur" });
         }
-    })
+    });
 });
+
 
 // REGISTER
 app.post("/signup", (req, res) => {
