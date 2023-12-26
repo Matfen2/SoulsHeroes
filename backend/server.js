@@ -9,18 +9,18 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'Matfen',
-    password: 'Geralt2077!',
-    database: 'heroes'
+  host: "localhost",
+  user: "Matfen",
+  password: "Geralt2077!",
+  database: "heroes",
 });
 
 db.connect((error) => {
-    if (!error) {
-        console.log('Connection réussie');
-    } else {
-        console.log('Echec de la connection');
-    }
+  if (!error) {
+    console.log("Connexion réussie à la base de données");
+  } else {
+    console.error("Échec de la connexion à la base de données:", error);
+  }
 });
 
 app.listen(PORT, () => {
