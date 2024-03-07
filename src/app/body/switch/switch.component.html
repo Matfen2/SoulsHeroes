@@ -1,0 +1,82 @@
+<div class="listSwitch">
+  <button type="button" id="btnSwitch" (click)="showContain('search')">RECHERCHE</button>
+  <button type="button" id="btnSwitch" (click)="showContain('wishes')">LISTE DE SOUHAITS</button>
+
+  <div class="containShow" [ngSwitch]="show">
+    <!-- SEARCH -->
+    <div class="showSearch" *ngSwitchCase="'search'">
+      <form class="d-flex" [formGroup]="comics" (ngSubmit)="searchComics()">
+        <input class="form-control me-2" type="search" id="title" name="title" formControlName="title"
+          placeholder="Entrer un titre">
+        <button class="btn btn-dark" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="containSearch">
+            <div *ngIf="searchedTitle">
+              <h3 class="results">Résultats de recherche pour : {{ searchedTitle }}</h3>
+            </div>
+
+            <div *ngIf="results && !loading" class="listResults">
+              <div class="resultSearch">
+                <div class="test d-flex" *ngFor="let result of results" appCardResults
+                  (click)="showSelectedResult(result)">
+                  <p class="title">{{ result.title }}</p>
+                  <p class="price">{{ result.price }} €</p>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="loading">Chargement en cours...</div>
+
+            <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div *ngIf="selectedResult" class="cardComics">
+            <div class="row">
+              <div class="col-lg-4">
+                <img [src]="selectedResult.pict" class="img-fluid w-100" alt="{{ selectedResult.title }}">
+              </div>
+              <div class="col-lg-8">
+                <p class="story">{{ selectedResult.story }}</p>
+                <button type="button" id="btnPost" (click)="addToWishlist()">AJOUTER A LA LISTE DE SOUHAITS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footerOne">
+        <p class="copy">© Soul's Heroes 2024</p>
+      </footer>
+    </div>
+
+    <!-- WISHES -->
+    <div class="showWishes" *ngSwitchCase="'wishes'">
+      <h3 class="list">Liste de souhaits</h3>
+      <div class="containTable">
+        <table class="table">
+          <thead>
+            <tr class="listHead">
+              <th class="head">Titre</th>
+              <th class="head">Prix</th>
+              <th class="head">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let comic of wishlist; let i = index" appComics>
+              <td class="table-secondary title">{{ comic.title }}</td>
+              <td class="table-secondary price">{{ comic.price }} €</td>
+              <td class="table-secondary btnList"><button type="button" id="btnBuy">ACHETER</button><button
+                  type="button" id="btnDelete" (click)="removeFromWishlist(i)">SUPPRIMER</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer class="footerTwo">
+        <p class="copy">© Soul's Heroes 2024</p>
+      </footer>
+    </div>
+  </div>
+</div>

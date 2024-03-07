@@ -1,0 +1,41 @@
+<section id="main">
+  <div class="containMain">
+    <!-- NAV -->
+    <app-nav></app-nav>
+    <app-subscribe></app-subscribe>
+
+    <!-- BODY -->
+    <div class="showBody">
+      <h2 class="wake">Réveillez le héros qui est en vous :</h2>
+      <div class="containSwitch">
+        <app-switch></app-switch>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CANVAS -->
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="showCanvas"
+  aria-labelledby="showCanvasLabel">
+  <button type="button" id="btnCloseCanvas" data-bs-dismiss="offcanvas" aria-label="Close"><i
+      class="fas fa-times"></i></button>
+  <div class="offcanvas-body">
+    <div class="containNav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          MEDIA
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">FILMS</a></li>
+          <li><a class="dropdown-item" href="#">SERIES TV</a></li>
+          <li><a class="dropdown-item" href="#">JEUX VIDEO</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">UNIVERS</a>
+      </li>
+    </div>
+    <button type="button" id="btnSubscribe" data-bs-toggle="modal" data-bs-target="#showSubscribe">ABONNEMENT</button>
+  </div>
+</div>

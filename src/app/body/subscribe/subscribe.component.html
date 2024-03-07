@@ -1,0 +1,23 @@
+<div class="modal fade" id="showSubscribe" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content d-flex align-items-center"
+      style="background-image: url('/assets/pict/subscribeWallpaper.jpeg'); background-repeat: no-repeat; background-position: center; background-size: cover">
+      <button type="button" id="btnCloseModal" data-bs-dismiss="modal" aria-label="Close"><i
+          class="fas fa-times"></i></button>
+      <div class="modal-body">
+        <h5 class="modal-title" id="exampleModalLabel">ABONNEMENT À LA NEWSLETTER OFFICIEL DE SOUL'S HEROES :</h5>
+        <p class="subscribeInfo">Retrouvez toutes les infos et annonces à propos des univers des comics sur votre fil
+          d'actualité !</p>
+        <form [formGroup]="register" (ngSubmit)="subscribe()">
+          <input type="email" formControlName="adress" class="form-control" id="adress"
+            placeholder="Entrer votre adresse email">
+          <button type="submit" id="btnSubscribe">S'INSCRIRE</button>
+        </form>
+        <div class="alert alert-danger" style="height: 60px"
+          *ngIf="register.get('adress')?.invalid && register.get('adress')?.errors?.['email'] && register.get('adress')?.touched">
+          <p>Adresse email incorrect</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

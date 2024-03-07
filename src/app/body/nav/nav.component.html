@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-brand">
+    <img src="/assets/pict/soulsHeroesLogo.png" class="img-fluid w-100" [routerLink]="'/main'" alt="soulsHeroesLogo" />
+  </div>
+  <button id="btnBar" type="button" data-bs-toggle="offcanvas" data-bs-target="#showCanvas"
+    aria-controls="showCanvas"><i class="fas fa-bars"></i></button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          MEDIA
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">FILMS</a></li>
+          <li><a class="dropdown-item" href="#">SERIES TV</a></li>
+          <li><a class="dropdown-item" href="#">JEUX VIDEO</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">UNIVERS</a>
+      </li>
+    </ul>
+    <button type="button" id="btnSubscribe" data-bs-toggle="modal" data-bs-target="#showSubscribe">ABONNEMENT</button>
+  </div>
+</nav>

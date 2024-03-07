@@ -1,0 +1,890 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: heyComic;
+  src: url("/assets/font/heyComic.ttf");
+}
+@font-face {
+  font-family: komikaAxis;
+  src: url("/assets/font/komikaAxis.ttf");
+}
+#main .containMain {
+  height: 939px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/pict/mainWallpaper.png");
+}
+#main .containMain .navbar {
+  display: flex;
+  flex-direction: row;
+}
+#main .containMain .navbar .navbar-brand .img-fluid {
+  height: 150px;
+  cursor: pointer;
+  max-width: 280px;
+  transition: all 0.25ms ease;
+}
+#main .containMain .navbar .navbar-brand .img-fluid:hover {
+  transform: scale(0.8);
+}
+#main .containMain .navbar #btnBar {
+  display: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4em;
+  color: azure;
+  background: transparent;
+}
+#main .containMain .navbar .collapse {
+  margin-top: -20px;
+  justify-content: end;
+}
+#main .containMain .navbar .collapse .navbar-nav {
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  margin-right: 65px;
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item {
+  color: azure;
+  font-family: heyComic;
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item .nav-link {
+  color: azure;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: all 0.25ms ease;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  transform: scale(1.1);
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item .dropdown-menu {
+  margin-left: 50px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid azure;
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1.2em;
+  color: azure;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  transform: scale(1.1);
+  background: transparent;
+}
+#main .containMain .navbar .collapse #btnSubscribe {
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  border-radius: 5px;
+  color: azure;
+  margin-right: 10px;
+  font-family: heyComic;
+  background: transparent;
+  border: 2px solid azure;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .navbar .collapse #btnSubscribe:hover {
+  color: black;
+  background-color: azure;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody {
+  margin-top: 0px;
+}
+#main .containMain .showBody .wake {
+  color: azure;
+  text-align: center;
+  font-family: komikaAxis;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 4px 5px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+#main .containMain .showBody .containSwitch .listSwitch #btnSwitch {
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  border-radius: 5px;
+  color: azure;
+  margin-right: 10px;
+  font-family: heyComic;
+  background: transparent;
+  border: 2px solid azure;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch #btnSwitch:hover {
+  color: black;
+  background-color: azure;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form {
+  margin-top: 40px;
+  justify-content: center;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form .form-control {
+  width: 48%;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row {
+  margin: auto;
+  max-width: 1600px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 {
+  margin-top: 30px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+  margin-top: -10px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+  margin-top: 40px;
+  font-size: 1.4em;
+  color: azure;
+  font-family: komikaAxis;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+  margin-left: -20px;
+  margin-top: 5px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+  height: 330px;
+  width: 550px;
+  overflow: auto;
+  padding-right: 20px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test {
+  margin: 5px 0px 5px 0px;
+  padding: 0px 5px 0px 5px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: space-between;
+  border: 1px solid azure;
+  transition: all 0.25ms ease;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test:hover {
+  transform: scale(0.9);
+  background-color: black;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+  margin-top: 5px;
+  font-size: 1.4em;
+  color: azure;
+  font-family: heyComic;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .price {
+  height: 35px;
+  width: 82px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: azure;
+  border-radius: 10px;
+  font-family: komikaAxis;
+  padding: 10px 5px -10px 3px;
+  background-color: darkgreen;
+  border: 1px solid azure;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+  padding-left: 80px;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+  height: 430px;
+  margin-top: 10px;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 0px solid azure;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+  margin-top: 77px;
+  font-size: 1.6em;
+  overflow: auto;
+  height: 300px;
+  color: azure;
+  font-family: heyComic;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost {
+  width: 320px;
+  cursor: pointer;
+  padding: 0px 0px 5px 0px;
+  color: black;
+  font-family: komikaAxis;
+  background: azure;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(0deg);
+  transition: all 0.25ms ease;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost:hover {
+  transform: scale(0.9);
+  color: azure;
+  background: black;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .footerOne .copy {
+  bottom: 2%;
+  left: 50%;
+  position: absolute;
+  margin: -8px auto;
+  font-size: 1.6em;
+  color: azure;
+  text-align: center;
+  font-family: komikaAxis;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 4px 5px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .list {
+  font-size: 1.7em;
+  margin-top: 20px;
+  color: azure;
+  letter-spacing: 1px;
+  font-family: komikaAxis;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+  height: 540px;
+  overflow: auto;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table {
+  width: 100%;
+  max-width: 850px;
+  margin: 18px auto;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table thead .listHead .head {
+  font-family: komikaAxis;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .table-secondary {
+  font-size: 1.4em;
+  font-family: heyComic;
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy {
+  color: azure;
+  margin-right: 5px;
+  border-radius: 10px;
+  transition: all 0.25ms ease;
+  background-color: darkred;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy:hover {
+  background: transparent;
+  transform: scale(1.1);
+  color: black;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete {
+  color: azure;
+  margin-left: 5px;
+  border-radius: 10px;
+  background-color: darkgreen;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete:hover {
+  background: transparent;
+  transform: scale(1.1);
+  color: black;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .footerTwo .copy {
+  bottom: 2%;
+  left: 50%;
+  position: absolute;
+  margin: -8px auto;
+  font-size: 1.6em;
+  color: azure;
+  text-align: center;
+  font-family: komikaAxis;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 4px 5px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main #showSubscribe .modal-dialog .modal-content #btnCloseModal {
+  top: 0%;
+  right: 0%;
+  font-size: 1.9em;
+  position: absolute;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+}
+#main #showSubscribe .modal-dialog .modal-content #btnCloseModal:hover {
+  transform: scale(1.1);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body {
+  top: 50%;
+  left: 50%;
+  width: 1400px;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body .modal-title {
+  font-size: 1.9em;
+  color: azure;
+  font-family: komikaAxis;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body .subscribeInfo {
+  margin-top: 20px;
+  font-size: 1.6em;
+  color: azure;
+  font-family: heyComic;
+  text-shadow: 2px 2px 0px #000000, 5px 4px 0px rgba(255, 255, 255, 0.15);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body form {
+  width: 100%;
+  margin: auto;
+  display: block;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body form .form-control {
+  font-family: heyComic;
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body form #btnSubscribe {
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  border-radius: 5px;
+  color: azure;
+  margin-right: 10px;
+  font-family: heyComic;
+  background: transparent;
+  border: 2px solid azure;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body form #btnSubscribe:hover {
+  color: black;
+  background-color: azure;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#main #showSubscribe .modal-dialog .modal-content .modal-body .alert {
+  width: 45%;
+  margin: 8px auto;
+}
+
+#showCanvas {
+  height: 240px;
+  overflow: auto;
+  max-width: 250px;
+  border-radius: 0px 0px 0px 10px;
+  background-color: black;
+  border: 1px solid azure;
+}
+#showCanvas #btnCloseCanvas {
+  top: 0%;
+  right: 0%;
+  font-size: 1.9em;
+  position: absolute;
+  color: azure;
+  border: transparent;
+  background: transparent;
+  transition: all 0.25ms ease;
+}
+#showCanvas #btnCloseCanvas:hover {
+  transform: scale(1.1);
+}
+#showCanvas .offcanvas-body {
+  margin-top: 0px;
+}
+#showCanvas .offcanvas-body .containNav {
+  line-height: 40px;
+  margin-top: 30px;
+  text-align: center;
+  list-style-type: none;
+}
+#showCanvas .offcanvas-body .containNav .nav-item {
+  color: azure;
+  font-family: heyComic;
+}
+#showCanvas .offcanvas-body .containNav .nav-item .nav-link {
+  color: azure;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: all 0.25ms ease;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#showCanvas .offcanvas-body .containNav .nav-item .nav-link:hover {
+  transform: scale(1.1);
+}
+#showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu {
+  border-radius: 5px;
+  background: azure;
+  border: 1px solid azure;
+}
+#showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu .dropdown-item {
+  font-size: 1.2em;
+  color: black;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#showCanvas .offcanvas-body .containNav .nav-item .dropdown-menu .dropdown-item:hover {
+  transform: scale(1.1);
+  background: transparent;
+}
+#showCanvas .offcanvas-body #btnSubscribe {
+  margin: 5px auto;
+  display: block;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  border-radius: 5px;
+  color: azure;
+  font-family: heyComic;
+  background: transparent;
+  border: 2px solid azure;
+  text-shadow: 0 1px 0px #000000, 1px 0 0px #000000, 1px 2px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+#showCanvas .offcanvas-body #btnSubscribe:hover {
+  color: black;
+  background-color: azure;
+  text-shadow: 0 1px 0px #ffffff, 1px 0 0px #ffffff, 1px 0px 1px #000000, 2px 2px 3px #000000, 2px 2px 2px #ffffff, 2px 2px 0px #ffffff, 2px 2px 8px rgba(206, 206, 206, 0.13);
+}
+
+@media screen and (max-width: 1440px) {
+  #main .containMain {
+    height: 999px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row {
+    max-width: 1300px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    margin-left: 65px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 120px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    margin-top: 70px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 580px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #main .containMain {
+    height: 859px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row {
+    max-width: 950px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+    margin-left: -30px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    margin-top: 28px;
+    width: 600px;
+    font-size: 1.2em;
+    margin-left: -80px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+    height: 290px;
+    width: 450px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+    overflow: auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 120px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+    height: 350px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    height: 230px;
+    margin-top: 70px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 430px;
+  }
+}
+@media screen and (max-width: 970px) {
+  #main .containMain .navbar .navbar-brand {
+    height: 80px;
+    max-width: 240px;
+  }
+  #main .containMain .navbar #btnBar {
+    display: block;
+    margin-top: 50px;
+    margin-right: 10px;
+  }
+  #main .containMain .navbar .collapse {
+    display: none;
+  }
+  #main .containMain .showBody {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .containMain {
+    height: 1210px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form {
+    margin-top: 30px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+    margin-top: -36px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    margin-left: 110px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+    margin-left: 150px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+    width: 540px;
+    height: 115px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+    overflow: hidden;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    height: 560px;
+    overflow: auto;
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 0px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+    height: 550px;
+    margin-top: -16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    margin: auto;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost {
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .footerOne .copy {
+    bottom: -330px;
+    font-size: 1.4em;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 760px;
+    margin: auto;
+    max-width: 700px;
+    border: 1px solid azure;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table {
+    max-width: 740px;
+    margin: 10px auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .title {
+    padding-top: 15px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .price {
+    font-size: 1.4em;
+    padding-top: 15px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList {
+    padding-top: 12px;
+    align-items: center;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy {
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete {
+    margin-right: 2px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .footerTwo .copy {
+    bottom: -330px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 425px) {
+  #main .containMain {
+    height: 1210px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form {
+    margin-top: 30px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+    margin-top: -46px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    width: 260px;
+    font-size: 1.2em;
+    margin-left: 100px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+    margin-left: 40px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+    width: 410px;
+    height: 115px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+    overflow: auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    height: 490px;
+    overflow: auto;
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 0px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+    height: 470px;
+    margin-top: -16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    margin: auto;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost {
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .footerOne .copy {
+    bottom: -360px;
+    font-size: 1.4em;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 700px;
+    margin: auto;
+    max-width: 400px;
+    border: 1px solid azure;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table {
+    max-width: 740px;
+    margin: 10px auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .title {
+    padding-top: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .price {
+    font-size: 1.4em;
+    padding-top: 15px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList {
+    padding-top: 12px;
+    align-items: center;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy {
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete {
+    margin-right: 2px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .footerTwo .copy {
+    bottom: -330px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 375px) {
+  #main .containMain {
+    height: 1210px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch #btnSwitch {
+    margin-bottom: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form {
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form .form-control {
+    width: 60%;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+    margin-top: -46px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    width: 260px;
+    font-size: 1.2em;
+    margin-left: 70px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+    margin-left: 40px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+    width: 360px;
+    height: 115px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+    overflow: auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .price {
+    width: 100px;
+    margin-left: 10px;
+    padding: 15px 10px -15px 16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    height: 490px;
+    overflow: auto;
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 0px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+    height: 450px;
+    margin-top: -16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    margin: auto;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost {
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .footerOne .copy {
+    bottom: -360px;
+    font-size: 1.4em;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 660px;
+    margin: auto;
+    max-width: 350px;
+    border: 1px solid azure;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table {
+    max-width: 740px;
+    margin: 10px auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .title {
+    padding-top: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .price {
+    font-size: 1.4em;
+    padding-top: 15px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList {
+    padding-top: 12px;
+    align-items: center;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy {
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete {
+    margin-right: 2px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .footerTwo .copy {
+    bottom: -350px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 320px) {
+  #main .containMain {
+    height: 1210px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch #btnSwitch {
+    margin-bottom: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form {
+    margin-top: 10px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch form .form-control {
+    width: 60%;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch {
+    margin-top: -46px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .results {
+    width: 260px;
+    font-size: 1.2em;
+    margin-left: 45px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults {
+    margin-left: 50px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch {
+    width: 280px;
+    height: 115px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test {
+    height: 70px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .title {
+    overflow: auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-4 .containSearch .listResults .resultSearch .test .price {
+    height: 53px;
+    width: 100px;
+    margin-left: 10px;
+    padding: 15px 10px -15px 16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 {
+    height: 490px;
+    overflow: auto;
+    margin-top: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics {
+    padding-left: 0px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-4 .img-fluid {
+    height: 450px;
+    margin-top: -16px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 .story {
+    margin: auto;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .row .col-lg-8 .cardComics .row .col-lg-8 #btnPost {
+    margin-top: 20px;
+    width: 200px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showSearch .footerOne .copy {
+    bottom: -360px;
+    font-size: 1.4em;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable {
+    height: 660px;
+    margin: auto;
+    max-width: 290px;
+    border: 1px solid azure;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table {
+    max-width: 740px;
+    margin: 10px auto;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .title {
+    padding-top: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .price {
+    font-size: 1.4em;
+    padding-top: 15px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList {
+    padding-top: 12px;
+    align-items: center;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnBuy {
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .containTable .table tbody tr .btnList #btnDelete {
+    margin-right: 2px;
+  }
+  #main .containMain .showBody .containSwitch .listSwitch .containShow .showWishes .footerTwo .copy {
+    bottom: -350px;
+    font-size: 1.4em;
+  }
+}/*# sourceMappingURL=styles.css.map */
